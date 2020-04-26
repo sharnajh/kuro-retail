@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,12 +15,38 @@
       -ms-flex: 1;
           flex: 1;
   margin: 5px;
-  background-size: cover;
-  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.menu-item:hover .background-image {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.menu-item:hover .content:before {
+  opacity: 0.8;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 .menu-item.large {
   height: 380px;
+}
+
+.menu-item .background-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 .menu-item .content {
@@ -36,17 +63,30 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 120px;
+  padding: 25px;
+  font-family: 'Barlow Condensed', sans-serif;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.menu-item .content:before {
+  content: "";
+  position: absolute;
   background-color: white;
-  border: 1px solid black;
-  padding: 20px;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 .menu-item .content .title {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .menu-item .content .subtitle {

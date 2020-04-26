@@ -1,0 +1,35 @@
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+  @include center-flex();
+  min-width: 30%;
+  height: 240px;
+  flex: 1;
+  margin: 5px;
+  background-size: cover;
+  background-position: center;
+  &.large {
+    height: 380px;
+  }
+  .content {
+    @include center-flex();
+    flex-direction: column;
+    width: 120px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    .title {
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+    .subtitle {
+      text-transform: uppercase;
+    }
+  }
+}

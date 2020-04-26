@@ -1,8 +1,9 @@
 import React from "react";
+import "./css/MenuItem.css";
 
-const MenuItem = ({ title }) => {
+const MenuItem = ({ title, imgUrl, size }) => {
     return (
-        <div className="menu-item">
+        <div className={`${size} menu-item`} style={{ backgroundImage: `url(${imgUrl})` }}>
             <div className="content">
                 <h1 className="title">{title}</h1>
                 <span className="subtitle">shop now</span>

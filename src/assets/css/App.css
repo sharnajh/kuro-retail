@@ -1,0 +1,13 @@
+:root body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root body .homepage .directory-menu .menu-item .content .title {
+  text-transform: uppercase;
+}
+
+:root body .homepage .directory-menu .menu-item .content .subtitle {
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=App.css.map */

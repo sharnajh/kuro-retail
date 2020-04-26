@@ -1,0 +1,20 @@
+:root {
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    .homepage {
+      .directory-menu {
+        .menu-item {
+          .content {
+            .title {
+              text-transform: uppercase;
+            }
+            .subtitle {
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+}

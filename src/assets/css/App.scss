@@ -1,16 +1,46 @@
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 :root {
   body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     .homepage {
+      @include center-flex();
       .directory-menu {
-        .menu-item {
-          .content {
-            .title {
-              text-transform: uppercase;
-            }
-            .subtitle {
-              text-transform: uppercase;
+        width: 80vw;
+        .directory-row {
+          display: flex;
+          &:first-child {
+              .menu-item {
+                  width: 33.33%;
+              }
+          }
+          &:last-child {
+              .menu-item {
+                  width: 50%;
+              }
+          }
+          .menu-item {
+            @include center-flex();
+            border: 1px solid black;
+            height: 250px;
+            margin: 2px;
+            .content {
+              @include center-flex();
+              flex-direction: column;
+              width: 200px;
+              border: 1px solid black;
+              padding: 20px;
+              .title {
+                text-transform: uppercase;
+              }
+              .subtitle {
+                text-transform: uppercase;
+              }
             }
           }
         }

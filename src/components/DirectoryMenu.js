@@ -4,11 +4,15 @@ import MenuItem from "./MenuItem";
 const DirectoryMenu = () => {
     return (
         <div className="directory-menu">
-            <MenuItem title="hats" />
-            <MenuItem title="jackets" />
-            <MenuItem title="sneakers" />
-            <MenuItem title="womens" />
-            <MenuItem title="mens" />
+            <div className="directory-row">
+                <MenuItem title="hats" />
+                <MenuItem title="jackets" />
+                <MenuItem title="sneakers" />
+            </div>
+            <div className="directory-row">
+                <MenuItem title="womens" />
+                <MenuItem title="mens" />
+            </div>
         </div>
     )
 }

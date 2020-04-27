@@ -1,5 +1,9 @@
 .shop-page {
-  border: 1px solid black;
   padding: 5px;
+}
+
+.shop-page .main-title {
+  font-size: 36px;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=Shop.css.map */

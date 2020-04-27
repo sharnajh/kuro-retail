@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AACI,mBADe,CACf,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CACjC",
+    "mappings": "AAAA,AACI,mBADe,CACf,MAAM,CAAC;EACH,WAAW,EAAE,OAAO;CACvB;;AAHL,AAII,mBAJe,CAIf,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,SAAS,EAAE,IAAI;CAClB",
     "sources": [
         "PreviewCollection.scss"
     ],

@@ -31,7 +31,7 @@
 }
 
 .collection-item:hover .image {
-  opacity: 0.85;
+  opacity: 0.8;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -58,13 +58,14 @@
 
 .collection-item .image .add-to-cart-button {
   position: absolute;
-  width: 80%;
+  width: 78%;
   background-color: white;
   padding: 20px;
   font-size: 20px;
-  bottom: 15px;
+  bottom: 9.5px;
   text-align: center;
   opacity: 0;
+  border: 0.1px solid black;
 }
 
 .collection-item .collection-footer {
@@ -78,5 +79,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 20px;
+}
+
+.collection-item .collection-footer .name {
+  white-space: nowrap;
 }
 /*# sourceMappingURL=CollectionItem.css.map */

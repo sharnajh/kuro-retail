@@ -1,6 +1,10 @@
 .preview-collection {
+    .title {
+        font-weight: lighter;
+    }
     .preview {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 }

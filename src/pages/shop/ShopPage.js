@@ -9,6 +9,7 @@ const ShopPage = () => {
     console.log(collections)
     return (
         <div className="shop-page">
+            <h1 className="main-title">Collections</h1>
             {collections.map(({ id, ...otherCollectionProps}) => (
                 <PreviewCollection key={id} {...otherCollectionProps} />
             ))}

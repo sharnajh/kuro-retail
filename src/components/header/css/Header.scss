@@ -1,0 +1,22 @@
+.header {
+    margin: 0 5px;
+    padding-top: 30px;
+    //border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        width: 150px;
+        margin-left: 0;
+        margin-bottom: -3px;
+        padding: 10px 0;
+    }
+    .options {
+        .option {
+            margin: 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+    }
+}

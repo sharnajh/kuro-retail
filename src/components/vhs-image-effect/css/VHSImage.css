@@ -1,0 +1,64 @@
+.vhs-effect:hover {
+  cursor: pointer;
+}
+
+.vhs-effect:hover .background-image {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.vhs-effect:hover .background-image.r, .vhs-effect:hover .background-image.b, .vhs-effect:hover .background-image.g {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.vhs-effect:hover .background-image.r {
+  -webkit-transform: translate(3px, 4px) scale(1.05);
+          transform: translate(3px, 4px) scale(1.05);
+}
+
+.vhs-effect:hover .background-image.b {
+  -webkit-transform: translate(-2px, -2px) scale(1.05);
+          transform: translate(-2px, -2px) scale(1.05);
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.background-image.r, .background-image.g, .background-image.b {
+  position: absolute;
+}
+
+.background-image.r, .background-image.g {
+  mix-blend-mode: screen;
+  z-index: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.background-image.r {
+  -webkit-filter: url("#r");
+          filter: url("#r");
+}
+
+.background-image.g {
+  -webkit-filter: url("#g");
+          filter: url("#g");
+}
+
+.background-image.b {
+  -webkit-filter: url("#b");
+          filter: url("#b");
+}
+/*# sourceMappingURL=VHSImage.css.map */

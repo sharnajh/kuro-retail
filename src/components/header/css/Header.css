@@ -1,6 +1,6 @@
 .header {
   margin: 0 5px;
-  padding-top: 30px;
+  padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,16 +13,49 @@
 }
 
 .header .logo {
-  width: 150px;
+  width: 120px;
   margin-left: 0;
   margin-bottom: -3px;
   padding: 10px 0;
 }
 
+.header .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .options .link {
+  position: relative;
+}
+
+.header .options .link:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width: 0%;
+  right: 0;
+  bottom: -4px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.header .options .link:hover:after {
+  width: 100%;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  left: 0;
+}
+
 .header .options .option {
-  margin: 10px;
+  margin: 20px;
   text-decoration: none;
   color: black;
   font-size: 20px;
+}
+
+.header .options .option:last-child {
+  margin-right: 0;
 }
 /*# sourceMappingURL=Header.css.map */

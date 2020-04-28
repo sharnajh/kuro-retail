@@ -4,7 +4,7 @@ import './css/Homepage.css';
 
 const Homepage = () => {
     return (
-        <div className="homepage">
+        <div className="homepage">    
             <DirectoryMenu />
         </div>
     )

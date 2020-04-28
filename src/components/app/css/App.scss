@@ -1,4 +1,31 @@
+$red: #fe346e;
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 :root {
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
   body {
     margin: 0;
     font-family: "Barlow Condensed", sans-serif;

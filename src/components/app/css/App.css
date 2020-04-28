@@ -1,3 +1,27 @@
+:root {
+  overflow-y: scroll;
+  /* Handle */
+  /* Handle on hover */
+}
+
+:root ::-webkit-scrollbar {
+  position: absolute;
+  display: inline-block;
+  width: 10px;
+}
+
+:root ::-webkit-scrollbar-track {
+  background: white;
+}
+
+:root ::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+:root ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 :root body {
   margin: 0;
   font-family: "Barlow Condensed", sans-serif;

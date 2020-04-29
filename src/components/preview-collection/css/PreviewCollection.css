@@ -9,8 +9,7 @@
   text-transform: uppercase;
   font-size: 100px;
   color: transparent;
-  -webkit-text-stroke: 2px black;
-  opacity: 0.6;
+  -webkit-text-stroke: 2px #b5c3c7;
   margin-top: 20px;
   margin-bottom: -47px;
   margin-left: 5px;

@@ -4,7 +4,7 @@ import VHSImage from "../vhs-image-effect/VHSImage";
 
 const MenuItem = ({ title, imgUrl, size }) => {
     return (
-        <div className={`${size} menu-item`}>
+        <div className={`${size.length ? size : ""} menu-item`}>
             <VHSImage imgUrl={imgUrl} />
             <div className="content">
                 <h1 className="title">{title.toUpperCase()}</h1>

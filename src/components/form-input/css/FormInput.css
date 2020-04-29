@@ -1,0 +1,59 @@
+.input-group {
+  position: relative;
+  margin: 45px 0;
+}
+
+.input-group .form-input {
+  background: none;
+  color: gray;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  border: none;
+  position: relative;
+  padding: 10px;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+.input-group .form-input:focus {
+  outline: none;
+}
+
+.input-group .form-input:focus ~ .form-input-label {
+  top: -17px;
+  font-size: 15px;
+  color: black;
+}
+
+.input-group input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
+.input-group .form-input-label {
+  color: gray;
+  position: absolute;
+  pointer-events: none;
+  font-size: 20px;
+  top: calc(50% - 10px);
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+  text-transform: capitalize;
+}
+
+.input-group .form-input-label.shrink {
+  top: -17px;
+  font-size: 15px;
+  color: black;
+}
+
+.input-group:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  left: 0;
+  bottom: -4px;
+}
+/*# sourceMappingURL=FormInput.css.map */

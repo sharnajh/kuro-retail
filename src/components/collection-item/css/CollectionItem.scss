@@ -1,61 +1,61 @@
 .collection-item {
-    min-width: 22%;
-    display: flex;
-    flex-direction: column;
-    height: 350px;
-    align-items: center;
-    flex-grow: 1;
-    margin: 10px;
-    position: relative;
-    background-color: black;
-    overflow: hidden;
-    &:first-child {
-        margin-left: 0;
-    }
-    &:last-child {
-        margin-right: 0;
-    }
-    &:hover {
-        cursor: pointer;
-        .image {
-            opacity: 0.8;
-            transition: 0.3s;
-        }
-        .add-to-cart-button {
-            opacity: 0.8;
-            transition: 0.3s;
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
+  min-width: 22%;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  align-items: center;
+  flex-grow: 1;
+  margin: 10px;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    cursor: pointer;
     .image {
-        position: absolute;
-        width: 100%;
-        height: 94%;
-        object-fit: cover;
+      opacity: 0.8;
+      transition: 0.3s;
     }
     .add-to-cart-button {
-        position: absolute;
-        width: 78%;
-        background-color: white;
-        padding: 20px;
-        font-size: 20px;
-        bottom: 34px;
-        text-align: center;
-        opacity: 0;
-        border: 0.1px solid black;
+      opacity: 0.8;
+      transition: 0.3s;
+      &:hover {
+        opacity: 1;
+      }
     }
-    .collection-footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        font-size: 20px;
-        background-color: white;
-        .name {
-            white-space: nowrap;
-        }
+  }
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 94%;
+    object-fit: cover;
+  }
+  .add-to-cart-button {
+    position: absolute;
+    width: 78%;
+    background-color: white;
+    padding: 20px;
+    font-size: 20px;
+    bottom: 34px;
+    text-align: center;
+    opacity: 0;
+    border: 0.1px solid black;
+  }
+  .collection-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: white;
+    .name {
+      white-space: nowrap;
     }
+  }
 }

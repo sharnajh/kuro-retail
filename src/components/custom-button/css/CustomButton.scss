@@ -1,0 +1,26 @@
+.custom-button {
+    font-family: "Barlow Condensed", sans-serif;
+    min-width: 150px;
+    width: auto;
+    height: 50px;
+    padding: 0 35px 0 35px;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    background: none;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin: 5px 0px 5px 0;
+    &:active {
+        outline: none;
+    }
+    &:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+}

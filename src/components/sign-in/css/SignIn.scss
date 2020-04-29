@@ -1,0 +1,26 @@
+.sign-in {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    .button-group {
+        width: 100%;
+        display: flex;
+        .custom-button {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            &:first-child {
+                margin-right: 5px;
+            }
+            &:last-child {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

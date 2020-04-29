@@ -1,5 +1,22 @@
+.preview-collection {
+  margin-top: 120px;
+  position: relative;
+}
+
 .preview-collection .title {
-  font-weight: lighter;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  font-size: 100px;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+  opacity: 0.6;
+  margin-top: 20px;
+  margin-bottom: -47px;
+  margin-left: 5px;
+  pointer-events: none;
+  position: absolute;
+  top: -100px;
 }
 
 .preview-collection .preview {
@@ -11,5 +28,6 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  z-index: 1;
 }
 /*# sourceMappingURL=PreviewCollection.css.map */

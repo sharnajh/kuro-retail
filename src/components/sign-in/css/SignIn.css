@@ -1,1 +1,44 @@
-/* No CSS *//*# sourceMappingURL=SignIn.css.map */
+.sign-in {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign-in .button-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign-in .button-group .custom-button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.sign-in .button-group .custom-button:first-child {
+  margin-right: 5px;
+}
+
+.sign-in .button-group .custom-button:last-child svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=SignIn.css.map */

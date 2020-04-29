@@ -1,20 +1,21 @@
 $parent: ".menu-item";
+$scale: scale(1.05);
 
 .vhs-effect {
   &:hover {
     cursor: pointer;
     .background-image {
-      transform: scale(1.05);
+      transform: $scale;
       &.r,
       &.b,
       &.g {
-        transform: scale(1.05);
+        transform: $scale;
       }
       &.r {
-        transform: translate(3px, 4px) scale(1.05);
+        transform: translate(3px, 4px) $scale;
       }
       &.b {
-        transform: translate(-2px, -2px) scale(1.05);
+        transform: translate(-2px, -2px) $scale;
       }
     }
   }

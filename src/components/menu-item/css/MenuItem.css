@@ -67,6 +67,7 @@
 
 .menu-item .content .title {
   font-family: "Roboto Condensed", sans-serif;
+  font-style: italic;
   letter-spacing: -1px;
   margin: 0;
   margin-bottom: 2px;

@@ -39,9 +39,9 @@
 .title-wrapper .main-title::after {
   content: "";
   position: absolute;
-  width: 0 !important;
+  width: 50% !important;
   height: 4px;
   background-color: black;
-  bottom: 10px;
+  bottom: -15px;
 }
 /*# sourceMappingURL=MainTitle.css.map */

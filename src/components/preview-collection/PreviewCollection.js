@@ -13,7 +13,7 @@ const PreviewCollection = ({ title, items }) => {
                 {items
                     .filter((item, i) => i < 4)
                     .map(({ id, ...otherProps }) => (
-                        <CollectionItem key={id} {...otherProps} />
+                        <CollectionItem key={id} id={id} {...otherProps} />
                 ))}
             </div>
         </div>

@@ -10,6 +10,7 @@
 .vhs-effect:hover .background-image.r, .vhs-effect:hover .background-image.b, .vhs-effect:hover .background-image.g {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  opacity: 1;
 }
 
 .vhs-effect:hover .background-image.r {
@@ -23,8 +24,9 @@
 }
 
 .background-image {
-  background-size: cover;
-  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -38,6 +40,7 @@
 
 .background-image.r, .background-image.g, .background-image.b {
   position: absolute;
+  opacity: 0;
 }
 
 .background-image.r, .background-image.g {

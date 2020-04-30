@@ -16,6 +16,7 @@
   margin: 5px;
   overflow: hidden;
   position: relative;
+  background-color: black;
 }
 
 .menu-item:hover {
@@ -65,9 +66,11 @@
 }
 
 .menu-item .content .title {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: -1px;
   margin: 0;
-  margin-bottom: 5px;
-  font-size: 25px;
+  margin-bottom: 2px;
+  font-size: 22px;
 }
 
 .menu-item .content .subtitle {

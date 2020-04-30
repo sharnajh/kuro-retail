@@ -33,7 +33,7 @@
 }
 
 .collection-item:hover .image {
-  opacity: 0.8;
+  opacity: 0.7 !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -54,6 +54,7 @@
   height: 94%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
 }
 
 .collection-item .add-to-cart-button {

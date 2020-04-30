@@ -5,7 +5,10 @@ import CollectionItem from "../collection-item/CollectionItem";
 const PreviewCollection = ({ title, items }) => {
     return (
         <div className="preview-collection">
+            <div className="preview-header">
             <h1 className="title">{title}</h1>
+            <h2 className="subtitle">View entire collection</h2>
+            </div>
             <div className="preview">
                 {items
                     .filter((item, i) => i < 4)

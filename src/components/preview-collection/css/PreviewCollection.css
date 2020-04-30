@@ -1,15 +1,63 @@
 .preview-collection {
-  margin-top: 50px;
+  margin-top: 55px;
+}
+
+.preview-collection .preview-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.preview-collection .preview-header .title {
+  font-family: "Roboto Condensed";
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  font-size: 33px;
+  font-weight: lighter;
+  color: black;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.preview-collection .preview-header .subtitle {
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+  padding: 0;
   position: relative;
 }
 
-.preview-collection .title {
-  text-transform: uppercase;
-  font-size: 45px;
-  font-weight: lighter;
-  color: black;
-  margin: 0;
-  padding: 0;
+.preview-collection .preview-header .subtitle:hover {
+  cursor: pointer;
+}
+
+.preview-collection .preview-header .subtitle:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.preview-collection .preview-header .subtitle:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  bottom: -2px;
+  right: 0;
 }
 
 .preview-collection .preview {

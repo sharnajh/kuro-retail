@@ -1,0 +1,26 @@
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  .main-title {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    vertical-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: -50px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0 !important;
+      height: 4px;
+      background-color: black;
+      bottom: 10px;
+    }
+  }
+}

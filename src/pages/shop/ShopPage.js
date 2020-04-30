@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/Shop.css";
 import { SHOP_DATA } from "./utils/data";
 //Components
+import MainTitle from "../../components/main-title/MainTitle";
 import PreviewCollection from "../../components/preview-collection/PreviewCollection";
 
 const ShopPage = () => {
@@ -9,7 +10,7 @@ const ShopPage = () => {
     console.log(collections)
     return (
         <div className="shop-page">
-            <h1 className="main-title">Collections</h1>
+            <MainTitle>Collections</MainTitle>
             {collections.map(({ id, ...otherCollectionProps }) => (
                 <PreviewCollection key={id} {...otherCollectionProps} />
             ))}

@@ -21,10 +21,10 @@
 .preview-collection .preview-header .title {
   font-family: "Roboto Condensed", sans-serif;
   font-style: italic;
+  font-weight: 700;
   letter-spacing: -2px;
   text-transform: uppercase;
   font-size: 33px;
-  font-weight: lighter;
   color: black;
   margin: 0 0 5px 0;
   padding: 0;

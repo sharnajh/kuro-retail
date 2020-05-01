@@ -6,6 +6,7 @@ import { auth } from "../../firebase/firebase";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 const Header = ({ authedUser }) => {
+  console.log(authedUser)
   return (
     <div className="header">
       <Link to="/">
@@ -29,7 +30,7 @@ const Header = ({ authedUser }) => {
             SIGN IN
           </Link>
         )}
-        <div className="option shopping-cart">🐱‍🚀</div>
+        <div className="option shopping-cart"><span>🐱‍🚀</span></div>
       </div>
     </div>
   );

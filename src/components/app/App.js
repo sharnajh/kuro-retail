@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './css/App.css';
+import React, { useState, useEffect } from "react";
+import "./css/App.css";
 import { Switch, Route } from "react-router-dom";
-import { auth } from "../../firebase/firebase";
+import { auth, createUserProfileDocument } from "../../firebase/firebase";
 //Components
 import Header from "../../components/header/Header";
 import Homepage from "../../pages/homepage/Homepage";
@@ -11,12 +11,23 @@ import SignInSignUp from "../../pages/sign-in-and-sign-up/SignInSignUp";
 const App = () => {
   const [authedUser, setAuthedUser] = useState(null);
   useEffect(() => {
-    const unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      setAuthedUser(user);
+    const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = createUserProfileDocument(userAuth);
+        (await userRef).onSnapshot((snapShot) => {
+          setAuthedUser({
+            authedUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+          });
+        });
+      }
+      setAuthedUser(userAuth);
     });
     return () => {
       unsubscribeFromAuth();
-    }
+    };
   }, []);
   return (
     <div className="container">
@@ -28,6 +39,6 @@ const App = () => {
       </Switch>
     </div>
   );
-}
+};
 
 export default App;

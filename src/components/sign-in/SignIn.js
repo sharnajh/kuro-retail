@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./css/SignIn.css";
+import { signInWithGoogle } from "../../firebase/firebase";
 //Components
 import FormInput from "../form-input/FormInput";
 import CustomButton from "../custom-button/CustomButton";
@@ -37,7 +38,10 @@ const SignIn = () => {
         />
         <div className="button-group">
           <CustomButton type="submit">Sign In</CustomButton>
-          <CustomButton type="submit">
+          <CustomButton
+            type="submit"
+            onClick={signInWithGoogle}
+          >
             <GoogleIcon />
             Sign in with Google
           </CustomButton>

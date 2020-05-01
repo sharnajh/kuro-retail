@@ -6,6 +6,10 @@ $red: #fe346e;
   align-items: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   overflow-y: scroll;
   ::-webkit-scrollbar {

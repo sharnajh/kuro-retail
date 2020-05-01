@@ -1,9 +1,9 @@
 import React from "react";
 import "./css/CustomButton.css";
 
-const CustomButton = ({ children, ...otherProps }) => {
+const CustomButton = ({ children, className, ...otherProps }) => {
     return (
-        <button className="custom-button" {...otherProps}>
+        <button className={className + " custom-button"} {...otherProps}>
             {children}
         </button>
     )

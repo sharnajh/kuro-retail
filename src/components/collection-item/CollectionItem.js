@@ -1,47 +1,29 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
+import { useIntersection } from "../../hooks/useIntersection";
 import "./css/CollectionItem.css";
 import gsap from "gsap";
 
 const CollectionItem = ({ id, name, imageUrl, price }) => {
-  const [loadImage,setLoadImage] = useState(false);
-  let div = useRef(null);
-  let image = useRef(null);
+  let div = useRef();
+  let image = useRef();
   const handleImgLoad = () => {
-    gsap.to(image, { opacity: 1 });
+    gsap.to(image.current, { opacity: 1 });
   };
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.2
-    }
-    const callback = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) { setLoadImage(true) };
-      })
-    }
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(div);
-    return () => {
-      observer.disconnect();
-    }
-  })
+  const loadImage = useIntersection({ threshold: 0.2, node: div });
   return (
     <div
       className="collection-item"
-      ref={(element) => {
-        div = element;
-      }}
+      ref={div}
     >
-      {loadImage && <img
-        ref={(element) => {
-          image = element;
-        }}
-        className="image"
-        src={imageUrl}
-        alt={name}
-        onLoad={handleImgLoad}
-      />}
+      {loadImage && (
+        <img
+          ref={image}
+          className="image"
+          src={imageUrl}
+          alt={name}
+          onLoad={handleImgLoad}
+        />
+      )}
       <div className="add-to-cart-button">ADD TO CART</div>
       <div className="collection-footer">
         <span className="name">{name}</span>

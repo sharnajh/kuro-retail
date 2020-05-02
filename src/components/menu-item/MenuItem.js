@@ -2,10 +2,10 @@ import React from "react";
 import "./css/MenuItem.css";
 import VHSImage from "../vhs-image-effect/VHSImage";
 
-const MenuItem = ({ title, imgUrl, size }) => {
+const MenuItem = ({ title, minImgUrl, bigImgUrl, size }) => {
     return (
         <div className={`${size.length ? size : ""} menu-item`}>
-            <VHSImage id={title} imgUrl={imgUrl} />
+            <VHSImage id={title} minImgUrl={minImgUrl} bigImgUrl={bigImgUrl} />
             <div className="content">
                 <h1 className="title">{title.toUpperCase()}</h1>
                 <span className="subtitle">SHOP NOW</span>

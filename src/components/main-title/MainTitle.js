@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./css/MainTitle.css";
 import gsap from "gsap";
 
 const MainTitle = ({ children }) => {
+  const title = useRef();
   useEffect(() => {
+    console.log("title: ", title)
     const tl = gsap.timeline();
-    tl.to(".main-title", { bottom: "0px", duration: .5 });
+    tl.to(title.current, { bottom: "0px", duration: .5 });
   });
   return (
     <div className="title-wrapper">
-      <h1 className="main-title">{children}</h1>
+      <h1 className="main-title" ref={title}>{children}</h1>
     </div>
   );
 };

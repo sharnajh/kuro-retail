@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./css/SignIn.css";
-import { signInWithGoogle } from "../../firebase/firebase";
+import { auth, signInWithGoogle } from "../../firebase/firebase";
 //Components
 import FormInput from "../form-input/FormInput";
 import CustomButton from "../custom-button/CustomButton";
@@ -10,10 +10,15 @@ import { ReactComponent as GoogleIcon } from "./assets/google-icon.svg";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setEmail("");
-    setPassword("");
+    try {
+      await auth.signInWithEmailAndPassword(email,password);
+      setEmail("");
+      setPassword("");
+    } catch(error) {
+      console.error(error)
+    }
   };
   return (
     <div className="sign-in">
@@ -39,7 +44,7 @@ const SignIn = () => {
         <div className="button-group">
           <CustomButton type="submit">Sign In</CustomButton>
           <CustomButton
-            type="submit"
+            type="button"
             onClick={signInWithGoogle}
           >
             <GoogleIcon />

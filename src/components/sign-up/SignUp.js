@@ -59,7 +59,9 @@ const SignUp = () => {
           value={confirmPassword}
           handleChange={setConfirmPassword}
         />
-        <CustomButton type="submit">sign up</CustomButton>
+        <CustomButton className="sign-up-button" type="submit">
+          sign up
+        </CustomButton>
       </form>
     </div>
   );

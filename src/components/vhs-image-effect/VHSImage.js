@@ -2,13 +2,12 @@ import React, { useState, useRef } from "react";
 import gsap from "gsap";
 import "./css/VHSImage.css";
 
-const VHSImage = ({ minImgUrl, bigImgUrl, id }) => {
+const VHSImage = ({ minImgUrl, bigImgUrl, title }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
   const placeholder = useRef();
-  console.log(placeholder.current)
-  const handleImgLoad = () => {
-    gsap.to(placeholder.current, { scale: 1 });
-    gsap.to(placeholder.current, { opacity: 0 });
+  const bigImg = useRef();
+  const handleImgLoad = async () => {
+    await gsap.to(placeholder.current, { opacity: 0, filter: "blur(30px)" });
     setImgLoaded(true);
   };
   return (
@@ -32,26 +31,26 @@ const VHSImage = ({ minImgUrl, bigImgUrl, id }) => {
             values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0 "
           />
         </filter>
-        <filter id="blur" x="0" y="0">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
-        </filter>
       </svg>
       <img
+        ref={bigImg}
         className="background-image"
         src={bigImgUrl}
         onLoad={handleImgLoad}
+        alt={title}
       />
       {imgLoaded ? (
         <div>
-          <img className="background-image r" src={bigImgUrl} />
-          <img className="background-image g" src={bigImgUrl} />
-          <img className="background-image b" src={bigImgUrl} />
+          <img className="background-image r" src={bigImgUrl} alt={title} />
+          <img className="background-image g" src={bigImgUrl} alt={title} />
+          <img className="background-image b" src={bigImgUrl} alt={title} />
         </div>
       ) : (
         <img
           ref={placeholder}
           className="placeholder background-image"
           src={minImgUrl}
+          alt={title}
         />
       )}
     </div>

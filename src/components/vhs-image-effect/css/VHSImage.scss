@@ -1,5 +1,5 @@
 $parent: ".menu-item";
-$scale: scale(1.05);
+$scale: scale(1.10);
 
 .vhs-effect {
   &:hover {
@@ -29,10 +29,10 @@ $scale: scale(1.05);
   position: absolute;
   left: 0;
   top: 0;
+  transform: scale(1.05);
   transition: transform 0.5s;
   &.placeholder {
-    filter: url(#blur);
-    transform: scale(1.2);
+    filter: blur(20px);
   }
   &.r,
   &.g,
@@ -44,7 +44,6 @@ $scale: scale(1.05);
   &.g {
     mix-blend-mode: screen;
     z-index: 1;
-    transform: translate(0);
   }
   &.r {
     filter: url("#r");

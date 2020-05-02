@@ -3,24 +3,24 @@
 }
 
 .vhs-effect:hover .background-image {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .vhs-effect:hover .background-image.r, .vhs-effect:hover .background-image.b, .vhs-effect:hover .background-image.g {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   opacity: 1;
 }
 
 .vhs-effect:hover .background-image.r {
-  -webkit-transform: translate(3px, 4px) scale(1.05);
-          transform: translate(3px, 4px) scale(1.05);
+  -webkit-transform: translate(3px, 4px) scale(1.1);
+          transform: translate(3px, 4px) scale(1.1);
 }
 
 .vhs-effect:hover .background-image.b {
-  -webkit-transform: translate(-2px, -2px) scale(1.05);
-          transform: translate(-2px, -2px) scale(1.05);
+  -webkit-transform: translate(-2px, -2px) scale(1.1);
+          transform: translate(-2px, -2px) scale(1.1);
 }
 
 .background-image {
@@ -31,6 +31,8 @@
   position: absolute;
   left: 0;
   top: 0;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -38,10 +40,8 @@
 }
 
 .background-image.placeholder {
-  -webkit-filter: url(#blur);
-          filter: url(#blur);
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
 }
 
 .background-image.r, .background-image.g, .background-image.b {
@@ -52,8 +52,6 @@
 .background-image.r, .background-image.g {
   mix-blend-mode: screen;
   z-index: 1;
-  -webkit-transform: translate(0);
-          transform: translate(0);
 }
 
 .background-image.r {

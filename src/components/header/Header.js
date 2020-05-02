@@ -2,6 +2,7 @@ import React from "react";
 import "./css/Header.css";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
+import { connect } from "react-redux";
 // Assets
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
@@ -36,4 +37,10 @@ const Header = ({ authedUser }) => {
   );
 };
 
-export default Header;
+const mapStateToProps = ({ user }) => {
+  return {
+    user
+  }
+}
+
+export default connect(mapStateToProps)(Header);

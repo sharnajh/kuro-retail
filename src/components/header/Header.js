@@ -5,6 +5,7 @@ import { auth } from "../../firebase/firebase";
 import { connect } from "react-redux";
 // Assets
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import ShoppingCart from "../shopping-cart/ShoppingCart";
 
 const Header = ({ authedUser }) => {
   console.log(authedUser);
@@ -31,10 +32,8 @@ const Header = ({ authedUser }) => {
             SIGN IN
           </Link>
         )}
-        <div className="option shopping-cart">
-          <span role="image" aria-label="jsx-a11y/aria-role">
-            🐱‍🚀
-          </span>
+        <div className="option">
+          <ShoppingCart />
         </div>
       </div>
     </div>

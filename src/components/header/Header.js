@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 const Header = ({ authedUser }) => {
-  console.log(authedUser)
+  console.log(authedUser);
   return (
     <div className="header">
       <Link to="/">
@@ -31,16 +31,20 @@ const Header = ({ authedUser }) => {
             SIGN IN
           </Link>
         )}
-        <div className="option shopping-cart"><span>🐱‍🚀</span></div>
+        <div className="option shopping-cart">
+          <span role="image" aria-label="jsx-a11y/aria-role">
+            🐱‍🚀
+          </span>
+        </div>
       </div>
     </div>
   );
 };
 
-const mapStateToProps = ({ user }) => {
+const mapStateToProps = (state) => {
   return {
-    user
-  }
-}
+    authedUser: state.user.authedUser,
+  };
+};
 
 export default connect(mapStateToProps)(Header);

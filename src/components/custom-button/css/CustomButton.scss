@@ -14,9 +14,9 @@
     border: none;
     border-radius: 0;
     cursor: pointer;
-    margin: 5px 0px 5px 0;
+    border: 1px solid black;
     &:active {
-        outline: none;
+        outline: none !important;
     }
     &:hover {
         background-color: white;

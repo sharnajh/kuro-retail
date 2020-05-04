@@ -1,6 +1,18 @@
 .shopping-cart {
-    svg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .cart-icon {
         width: 27px;
         height: 27px;
+    }
+    .item-count {
+        position: absolute;
+        font-size: 12px;
+        bottom: 2px;
+        color: darkslategray;
+        font-weight: bolder;
     }
 }

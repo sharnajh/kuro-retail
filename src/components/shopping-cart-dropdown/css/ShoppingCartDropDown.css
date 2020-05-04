@@ -1,0 +1,44 @@
+.shopping-cart-dropdown {
+  position: absolute;
+  width: 240px;
+  height: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: white;
+  top: 100px;
+  right: 0px;
+  z-index: 5;
+}
+
+.shopping-cart-dropdown .title {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.shopping-cart-dropdown .shopping-cart-items {
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 240px;
+}
+
+.shopping-cart-dropdown .btn {
+  margin-top: auto;
+}
+/*# sourceMappingURL=ShoppingCartDropDown.css.map */

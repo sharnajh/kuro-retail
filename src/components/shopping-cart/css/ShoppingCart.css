@@ -1,5 +1,30 @@
-.shopping-cart svg {
+.shopping-cart {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shopping-cart .cart-icon {
   width: 27px;
   height: 27px;
+}
+
+.shopping-cart .item-count {
+  position: absolute;
+  font-size: 12px;
+  bottom: 2px;
+  color: darkslategray;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=ShoppingCart.css.map */

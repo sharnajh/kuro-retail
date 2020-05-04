@@ -14,11 +14,11 @@
   border: none;
   border-radius: 0;
   cursor: pointer;
-  margin: 5px 0px 5px 0;
+  border: 1px solid black;
 }
 
 .custom-button:active {
-  outline: none;
+  outline: none !important;
 }
 
 .custom-button:hover {

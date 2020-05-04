@@ -3,11 +3,13 @@ import "./css/Header.css";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
 import { connect } from "react-redux";
+// Components
+import ShoppingCartDropDown from "../shopping-cart-dropdown/ShoppingCartDropDown";
 // Assets
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import ShoppingCart from "../shopping-cart/ShoppingCart";
 
-const Header = ({ authedUser }) => {
+const Header = ({ authedUser, toggleCart }) => {
   console.log(authedUser);
   return (
     <div className="header">
@@ -36,13 +38,15 @@ const Header = ({ authedUser }) => {
           <ShoppingCart />
         </div>
       </div>
+      {toggleCart && <ShoppingCartDropDown />}
     </div>
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ user: { authedUser }, cart: { toggleCart } }) => {
   return {
-    authedUser: state.user.authedUser,
+    authedUser,
+    toggleCart
   };
 };
 

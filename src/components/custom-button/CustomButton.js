@@ -3,7 +3,7 @@ import "./css/CustomButton.css";
 
 const CustomButton = ({ children, className, ...otherProps }) => {
     return (
-        <button className={className + " custom-button"} {...otherProps}>
+        <button className={`${className ? className : ""} custom-button`} {...otherProps}>
             {children}
         </button>
     )

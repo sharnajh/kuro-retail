@@ -61,12 +61,10 @@
   position: absolute;
   width: 90%;
   background-color: white;
-  padding: 20px;
-  font-size: 20px;
-  bottom: 37px;
-  text-align: center;
+  bottom: 0;
+  margin-bottom: 37px;
   opacity: 0;
-  border: 0.1px solid black;
+  color: black;
 }
 
 .collection-item .collection-footer {

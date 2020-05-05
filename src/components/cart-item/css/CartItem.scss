@@ -1,0 +1,19 @@
+.cart-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5px;
+    .image {
+        object-fit: cover;
+        width: 70px;
+        height: 100px;
+    }
+    .item-info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+        .name {
+            font-weight: bold;
+        }
+    }
+}

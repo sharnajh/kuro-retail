@@ -1,68 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kuro is a fictional urban online retail store, powered by React. 
 
-## Available Scripts
+## Features & Process
+### Images
+A primary focus for this website was to manage the loading of high quality images (from Unsplash) in huge quantities. The main goal was to have the images displayed to the user as quickly as possible without any jarring lags or blank screens.
+    - Implemented progressive loading by using a minified version of the image (small dimensions and low quality) with a blur filter as the placeholder. The placeholder is linked by 8-bit URI (thanks to webpack’s url-loader) so that it paints onto the document immediately, ensuring that there will be no blank divs during the loading process. 
+    - I code splitted the pages where multiple images load using the Intersection API so that an image only loads when it’s about to scroll into the viewport and not a moment sooner. The div’s background-color serves as the placeholder.
 
-In the project directory, you can run:
+### Layout
+I consider the goal of a good ecommerce site is for the products to have maximum exposure. In respect of that goal, I structured the site layout so that the users are able to log in, sign up, contact, and everything else without having to leave a page displaying products. For sitemap purposes, I still sectioned off the log, sign up, and contact components to their own separate routes with React Router.
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### User Authentication
+Users are able to sign up and log in via email and password or their Google account, via Firebase. Firebase data is managed client side with Redux. 

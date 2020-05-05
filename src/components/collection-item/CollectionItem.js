@@ -14,7 +14,7 @@ const CollectionItem = ({ addItemAction, item }) => {
   const handleImgLoad = () => {
     gsap.to(image.current, { opacity: 1 });
   };
-  const loadImage = useIntersection({ threshold: 0.2, node: div });
+  const loadImage = useIntersection({ threshold: 0.1, node: div });
   return (
     <div className="collection-item" ref={div}>
       {loadImage && (

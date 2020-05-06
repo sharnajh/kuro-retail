@@ -7,8 +7,11 @@ const VHSImage = ({ minImgUrl, bigImgUrl, title }) => {
   const placeholder = useRef();
   const bigImg = useRef();
   const handleImgLoad = async () => {
-    await gsap.to(placeholder.current, { opacity: 0, filter: "blur(30px)" });
-    setImgLoaded(true);
+    await gsap.to(placeholder.current, {
+      opacity: 0, filter: "blur(0px)", onComplete: () => {
+        setImgLoaded(true);
+      }
+    });
   };
   return (
     <div className="vhs-effect">
@@ -46,13 +49,13 @@ const VHSImage = ({ minImgUrl, bigImgUrl, title }) => {
           <img className="background-image b" src={bigImgUrl} alt={title} />
         </div>
       ) : (
-        <img
-          ref={placeholder}
-          className="placeholder background-image"
-          src={minImgUrl}
-          alt={title}
-        />
-      )}
+          <img
+            ref={placeholder}
+            className="placeholder background-image"
+            src={minImgUrl}
+            alt={title}
+          />
+        )}
     </div>
   );
 };

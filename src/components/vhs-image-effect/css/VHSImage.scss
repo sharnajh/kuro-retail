@@ -1,5 +1,5 @@
 $parent: ".menu-item";
-$scale: scale(1.10);
+$scale: scale(1.15);
 
 .vhs-effect {
   &:hover {
@@ -29,12 +29,11 @@ $scale: scale(1.10);
   position: absolute;
   left: 0;
   top: 0;
-  transform: scale(1.05);
+  transform: scale(1.1);
   transition: transform 0.5s;
   overflow: hidden;
   &.placeholder {
-    filter: blur(12px);
-    transform: scale(1.15);
+    filter: blur(15px);
   }
   &.r,
   &.g,

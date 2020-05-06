@@ -2,6 +2,7 @@ import React from "react";
 import "./css/ShoppingCart.css";
 import { connect } from "react-redux";
 import { toggleCartAction } from "../../redux/cart/cart.action";
+import { selectCartItemsCount } from "../../redux/cart/cart.selector";
 // Assets
 import { ReactComponent as ShoppingCartSVG } from "./shopping-cart.svg";
 
@@ -15,8 +16,8 @@ const ShoppingCart = ({ toggleCartAction, cartItems }) => {
   );
 };
 
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-  cartItems: cartItems.reduce((total, item) => total + item.quantity, 0),
+const mapStateToProps = (state) => ({
+  cartItems: selectCartItemsCount(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

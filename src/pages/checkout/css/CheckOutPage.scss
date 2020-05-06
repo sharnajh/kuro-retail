@@ -1,0 +1,39 @@
+@mixin grid-style($rowheight) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) repeat(3, 0.5fr);
+  grid-template-rows: $rowheight;
+  place-items: center;
+  text-align: center;
+}
+
+.checkout-page {
+  display: grid;
+  place-items: center;
+  .checkout-shopping-cart {
+    width: 70%;
+    .header {
+      @include grid-style(50px);
+      border-bottom: 1px solid black;
+      pointer-events: none;
+      margin: 0;
+      .title {
+        font-size: 17px;
+      }
+    }
+    .items {
+      border-bottom: 1px solid black;
+      .row {
+        @include grid-style(200px);
+        margin: 10px 0 10px 0;
+        .product {
+          position: relative;
+          .image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

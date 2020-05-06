@@ -10,6 +10,7 @@ import Header from "../../components/header/Header";
 import Homepage from "../../pages/homepage/Homepage";
 import ShopPage from "../../pages/shop/ShopPage";
 import SignInSignUp from "../../pages/sign-in-and-sign-up/SignInSignUp";
+import CheckOutPage from "../../pages/checkout/CheckOutPage";
 
 const App = ({ setAuthedUser, authedUser }) => {
   useEffect(() => {
@@ -40,6 +41,7 @@ const App = ({ setAuthedUser, authedUser }) => {
           path="/signin"
           render={() => (authedUser ? <Redirect to="/" /> : <SignInSignUp />)}
         />
+        <Route path="/checkout" component={CheckOutPage} />
       </Switch>
     </div>
   );

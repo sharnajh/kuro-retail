@@ -1,0 +1,55 @@
+.checkout-page {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.checkout-page .checkout-shopping-cart {
+  width: 70%;
+}
+
+.checkout-page .checkout-shopping-cart .header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2] (0.5fr)[3];
+      grid-template-columns: repeat(2, 1fr) repeat(3, 0.5fr);
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  place-items: center;
+  text-align: center;
+  border-bottom: 1px solid black;
+  pointer-events: none;
+  margin: 0;
+}
+
+.checkout-page .checkout-shopping-cart .header .title {
+  font-size: 17px;
+}
+
+.checkout-page .checkout-shopping-cart .items {
+  border-bottom: 1px solid black;
+}
+
+.checkout-page .checkout-shopping-cart .items .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2] (0.5fr)[3];
+      grid-template-columns: repeat(2, 1fr) repeat(3, 0.5fr);
+  -ms-grid-rows: 200px;
+      grid-template-rows: 200px;
+  place-items: center;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.checkout-page .checkout-shopping-cart .items .row .product {
+  position: relative;
+}
+
+.checkout-page .checkout-shopping-cart .items .row .product .image {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=CheckOutPage.css.map */

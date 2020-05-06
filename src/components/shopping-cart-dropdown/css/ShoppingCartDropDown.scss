@@ -19,10 +19,21 @@
     font-weight: 500;
   }
   .shopping-cart-items {
-    overflow: scroll;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     height: 240px;
+    .cart-items-wrapper {
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      height: 240px;
+      width: 100%;
+    }
+    .empty-message {
+      text-align: center;
+    }
   }
   .btn {
     margin-top: auto;

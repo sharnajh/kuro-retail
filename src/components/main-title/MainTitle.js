@@ -5,7 +5,6 @@ import gsap from "gsap";
 const MainTitle = ({ children }) => {
   const title = useRef();
   useEffect(() => {
-    console.log("title: ", title)
     const tl = gsap.timeline();
     tl.to(title.current, { bottom: "0px", duration: .5 });
   });

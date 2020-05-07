@@ -19,5 +19,5 @@ export const selectCartToggle = createSelector(
 
 export const selectCartTotal = createSelector(
     [selectCartItems],
-    (cartItems) => cartItems.reduce((total, item) => total + item.price, 0)
+    (cartItems) => cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)
 )

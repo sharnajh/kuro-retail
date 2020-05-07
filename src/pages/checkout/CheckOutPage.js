@@ -3,7 +3,6 @@ import "./css/CheckOutPage.css";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import {
-  selectCartTotal,
   selectCartItems,
 } from "../../redux/cart/cart.selector";
 import { Link } from "react-router-dom";
@@ -13,13 +12,13 @@ import CheckOutShoppingCart from "../../components/check-out-shopping-cart/Check
 import CheckOutTotal from "../../components/checkout-total/CheckOutTotal";
 import CustomButton from "../../components/custom-button/CustomButton";
 
-const CheckOutPage = ({ cartItems, cartItemsTotal }) => (
+const CheckOutPage = ({ cartItems }) => (
   <div className="checkout-page">
     <MainTitle>Shopping Cart</MainTitle>
     {cartItems.length > 0 ? (
       <div className="checkout-container">
         <CheckOutShoppingCart cartItems={cartItems} />
-        <CheckOutTotal cartItemsTotal={cartItemsTotal} />
+        <CheckOutTotal />
       </div>
     ) : (
       <div className="empty-message">
@@ -33,8 +32,7 @@ const CheckOutPage = ({ cartItems, cartItemsTotal }) => (
 );
 
 const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems,
-  cartItemsTotal: selectCartTotal,
+  cartItems: selectCartItems
 });
 
 export default connect(mapStateToProps)(CheckOutPage);

@@ -16,6 +16,18 @@
       object-fit: cover;
     }
   }
+  .quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    .arrow {
+      cursor: pointer;
+    }
+    .value {
+      margin: 0 10px;
+    }
+  }
   .remove {
       padding: 10px;
       &:hover {

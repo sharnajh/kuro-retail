@@ -23,12 +23,27 @@ const ShoppingCartDropDown = ({ cartItems, history, dispatch }) => {
           <div className="empty-message">Your cart is empty</div>
         )}
       </div>
-      <CustomButton className="btn" onClick={() => {
-          dispatch(toggleCartAction());
-          history.push("/cart");
-          }}>
-        GO TO Cart
-      </CustomButton>
+      {cartItems.length > 0 ? (
+        <CustomButton
+          className="btn"
+          onClick={() => {
+            dispatch(toggleCartAction());
+            history.push("/cart");
+          }}
+        >
+          GO TO Cart
+        </CustomButton>
+      ) : (
+        <CustomButton
+          className="btn"
+          onClick={() => {
+            dispatch(toggleCartAction());
+            history.push("/shop");
+          }}
+        >
+          SHOP
+        </CustomButton>
+      )}
     </div>
   );
 };

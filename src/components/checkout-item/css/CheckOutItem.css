@@ -17,6 +17,27 @@
      object-fit: cover;
 }
 
+.row .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.row .quantity .arrow {
+  cursor: pointer;
+}
+
+.row .quantity .value {
+  margin: 0 10px;
+}
+
 .row .remove {
   padding: 10px;
 }

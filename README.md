@@ -10,4 +10,12 @@ A primary focus for this website was to manage the loading of high quality image
 I consider the goal of a good ecommerce site is for the products to have maximum exposure. In respect of that goal, I structured the site layout so that the users are able to log in, sign up, contact, and everything else without having to leave a page displaying products. For sitemap purposes, I still sectioned off the log, sign up, and contact components to their own separate routes with React Router.
 
 ### User Authentication
-Users are able to sign up and log in via email and password or their Google account, via Firebase. Firebase data is managed client side with Redux. 
+Users are able to sign up and log in via email and password or their Google account, via Firebase. Firebase data is managed client side with Redux (with assistance from the Reselect library to improve performance).  
+
+### Payment
+
+Payments are managed by the Stripe API. As this is simply a project site, users cannot actually have transactions processed on the site.
+
+### Persisting Data
+
+It’s imperative that the user’s shopping cart data persists even if they close or refresh the tab, so I set that as a goal for this project. The first solution that came to mind was a no brainer - just have the user’s shopping cart data stored in Firebase and load it whenever the app initializes. It’s a great solution that comes with many benefits, but for this project’s particular use-case it would have been like slicing a tomato with a katana...that is on fire. Kuro is just a project ecommerce site. Instead, utilizing the Redux Persist library to manage window.localStorage is a much more practical alternative for this project.

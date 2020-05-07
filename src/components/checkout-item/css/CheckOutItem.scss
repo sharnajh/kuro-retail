@@ -1,0 +1,25 @@
+@mixin grid-style($rowheight) {
+    display: grid;
+    grid-template-columns: 150px 1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: $rowheight;
+    place-items: center;
+    text-align: center;
+  }
+
+.row {
+  @include grid-style(200px);
+  margin: 10px 0 10px 0;
+  .product {
+    .image {
+      height: 200px;
+      width: 150px;
+      object-fit: cover;
+    }
+  }
+  .remove {
+      padding: 10px;
+      &:hover {
+          cursor: pointer;
+      }
+  }
+}

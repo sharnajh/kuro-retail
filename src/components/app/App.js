@@ -41,7 +41,7 @@ const App = ({ setAuthedUser, authedUser }) => {
           path="/signin"
           render={() => (authedUser ? <Redirect to="/" /> : <SignInSignUp />)}
         />
-        <Route path="/checkout" component={CheckOutPage} />
+        <Route path="/cart" component={CheckOutPage} />
       </Switch>
     </div>
   );

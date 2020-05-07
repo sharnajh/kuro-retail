@@ -1,0 +1,22 @@
+.checkout-total {
+    border-left: 1px solid gray;
+    flex-grow: 1;
+    height: 130px;
+    margin-left: 40px;
+    margin-top: 50px;
+    padding: 0 10px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .total-price {
+        font-size: 25px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .checkout {
+        width: 100%;
+    }
+}

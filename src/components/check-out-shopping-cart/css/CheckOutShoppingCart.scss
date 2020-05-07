@@ -1,0 +1,23 @@
+@mixin grid-style($rowheight) {
+  display: grid;
+  grid-template-columns: 150px 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: $rowheight;
+  place-items: center;
+  text-align: center;
+}
+
+.checkout-shopping-cart {
+  width: 70%;
+  .header {
+    @include grid-style(50px);
+    border-bottom: 1px solid gray;
+    pointer-events: none;
+    margin: 0;
+    .title {
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+  .items {
+  }
+}

@@ -2,42 +2,39 @@ import React from "react";
 import "./css/CheckOutPage.css";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { selectCartTotal, selectCartItems } from "../../redux/cart/cart.selector";
+import {
+  selectCartTotal,
+  selectCartItems,
+} from "../../redux/cart/cart.selector";
+import { Link } from "react-router-dom";
 // Components
 import MainTitle from "../../components/main-title/MainTitle";
+import CheckOutShoppingCart from "../../components/check-out-shopping-cart/CheckOutShoppingCart";
+import CheckOutTotal from "../../components/checkout-total/CheckOutTotal";
+import CustomButton from "../../components/custom-button/CustomButton";
 
 const CheckOutPage = ({ cartItems, cartItemsTotal }) => (
-    <div className="checkout-page">
-        <MainTitle>Checkout</MainTitle>
-        <div className="checkout-shopping-cart">
-            <div className="header">
-                <span className="title">Product</span>
-                <span className="title">Description</span>
-                <span className="title">Quantity</span>
-                <span className="title">Price</span>
-                <span className="title">Remove</span>
-            </div>
-            <div className="items">
-                {cartItems.map((item) => (
-                    <div className="row">
-                        <span className="product"><img className="image" src={item.imageUrl} /></span>
-                        <span className="description">{item.name}</span>
-                        <span className="quantity">{item.quantity}</span>
-                        <span className="price">${item.price}</span>
-                        <span className="remove">X</span>
-                    </div>
-                ))}
-            </div>
-            <div className="total">
-               Subtotal: ${cartItemsTotal}
-            </div>
-        </div>
-    </div>
-)
+  <div className="checkout-page">
+    <MainTitle>Shopping Cart</MainTitle>
+    {cartItems.length > 0 ? (
+      <div className="checkout-container">
+        <CheckOutShoppingCart cartItems={cartItems} />
+        <CheckOutTotal cartItemsTotal={cartItemsTotal} />
+      </div>
+    ) : (
+      <div className="empty-message">
+        <span>Your cart is empty</span>
+        <Link to="/shop">
+          <CustomButton>Shop Now</CustomButton>
+        </Link>
+      </div>
+    )}
+  </div>
+);
 
 const mapStateToProps = createStructuredSelector({
-    cartItems: selectCartItems,
-    cartItemsTotal: selectCartTotal
-})
+  cartItems: selectCartItems,
+  cartItemsTotal: selectCartTotal,
+});
 
 export default connect(mapStateToProps)(CheckOutPage);

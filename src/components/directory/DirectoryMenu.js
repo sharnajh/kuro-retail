@@ -11,12 +11,13 @@ const DirectoryMenu = ({ sections }) => {
   return (
     <div className="directory-menu">
       {sections.map(
-        ({ title, minImgUrl, bigImgUrl, id, size }) => (
+        ({ title, minImgUrl, bigImgUrl, id, size, linkUrl }) => (
           <MenuItem
             key={id}
             title={title}
             minImgUrl={minImgUrl}
             bigImgUrl={bigImgUrl}
+            linkUrl={linkUrl}
             size={size}
           />
         )

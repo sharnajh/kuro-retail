@@ -21,7 +21,7 @@
       letter-spacing: 1px;
       font-size: 15px;
       text-transform: uppercase;
-      margin: 0 0 5px 0;
+      margin: 0 0 -10px 0;
       padding: 0;
       position: relative;
       &:hover {
@@ -44,9 +44,9 @@
     }
   }
   .preview {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
     z-index: 1;
   }
 }

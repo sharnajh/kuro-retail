@@ -1,11 +1,10 @@
 .collection-item {
-  min-width: 22%;
+  width: 21vw;
   display: flex;
   flex-direction: column;
   height: 350px;
+  margin-top: 30px;
   align-items: center;
-  flex-grow: 1;
-  margin: 10px;
   position: relative;
   background-color: black;
   overflow: hidden;

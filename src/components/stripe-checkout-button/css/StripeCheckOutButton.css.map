@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACpB,KAAK,EAAE,IAAI;CAId;;AALD,AAEI,uBAFmB,CAEnB,gBAAgB,CAAC;EACb,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "StripeCheckOutButton.scss"
+    ],
+    "names": [],
+    "file": "StripeCheckOutButton.css"
+}

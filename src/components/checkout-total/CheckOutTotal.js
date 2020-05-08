@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/CheckOutTotal.css";
-import CustomButton from "../custom-button/CustomButton";
+import StripeCheckOutButton from "../stripe-checkout-button/StripeCheckOutButton";
 import { connect } from "react-redux";
 import { selectCartTotal } from "../../redux/cart/cart.selector";
 
@@ -9,7 +9,7 @@ const CheckOutTotal = ({ cartItemsTotal }) => (
     <span className="total-price">
       <span>Subtotal:</span> <span>${cartItemsTotal}</span>
     </span>
-    <CustomButton className="checkout">Checkout</CustomButton>
+    <StripeCheckOutButton price={cartItemsTotal} />
   </div>
 );
 

@@ -8,7 +8,7 @@ const VHSImage = ({ minImgUrl, bigImgUrl, title }) => {
   const bigImg = useRef();
   const handleImgLoad = async () => {
     await gsap.to(placeholder.current, {
-      opacity: 0, filter: "blur(0px)", onComplete: () => {
+      opacity: 0, filter: "blur(0px)", duration: 0.7, onComplete: () => {
         setImgLoaded(true);
       }
     });

@@ -12,7 +12,7 @@ const CollectionItem = ({ addItemAction, item }) => {
   let div = useRef();
   let image = useRef();
   const handleImgLoad = () => {
-    gsap.to(image.current, { opacity: 1 });
+    gsap.to(image.current, { opacity: 1, duration: 0.5 });
   };
   const loadImage = useIntersection({ threshold: 0, node: div });
   return (

@@ -20,6 +20,7 @@ const INITIAL_STATE = {
             bigImgUrl: hatsImg,
             size: "reg",
             id: 1,
+            linkUrl: "shop/hats"
         },
         {
             title: "jackets",
@@ -27,6 +28,7 @@ const INITIAL_STATE = {
             bigImgUrl: jacketsImg,
             size: "reg",
             id: 2,
+            linkUrl: "shop/jackets"
         },
         {
             title: "sneakers",
@@ -34,6 +36,7 @@ const INITIAL_STATE = {
             bigImgUrl: shoesImg,
             size: "reg",
             id: 3,
+            linkUrl: "shop/sneakers"
         },
         {
             title: "womens",
@@ -41,6 +44,7 @@ const INITIAL_STATE = {
             bigImgUrl: womensImg,
             size: "large",
             id: 4,
+            linkUrl: "shop/womens"
         },
         {
             title: "mens",
@@ -48,12 +52,13 @@ const INITIAL_STATE = {
             bigImgUrl: mensImg,
             size: "large",
             id: 5,
+            linkUrl: "shop/mens"
         },
     ],
 };
 
-const directoryReducer = ( state = INITIAL_STATE, action ) => {
-    switch(action.type) {
+const directoryReducer = (state = INITIAL_STATE, action) => {
+    switch (action.type) {
         default:
             return state;
     }

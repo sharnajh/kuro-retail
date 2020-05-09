@@ -5,12 +5,12 @@ import { selectShopCollectionsForPreview } from "../../redux/shop/shop.selector"
 import MainTitle from "../../components/main-title/MainTitle";
 import PreviewCollection from "../../components/preview-collection/PreviewCollection";
 
-const CollectionsOverview = ({ collections }) => {
+const CollectionsOverview = ({ match, collections }) => {
     return (
         <div className="collections-overview">
             <MainTitle>Collections</MainTitle>
             {collections.map(({ id, ...otherCollectionProps }) => (
-                <PreviewCollection key={id} {...otherCollectionProps} />
+                <PreviewCollection key={id} match={match} {...otherCollectionProps} />
             ))}
         </div>
     )

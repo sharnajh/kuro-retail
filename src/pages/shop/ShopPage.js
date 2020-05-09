@@ -8,8 +8,8 @@ import Collection from "../../components/collection/Collection";
 const ShopPage = ({ match }) => {
     return (
         <div className="shop-page">
-           <Route exact path={`${match.path}`} component={CollectionsOverview} />
-           <Route path={`${match.path}/:collectionId`} component={Collection} />
+            <Route exact path={`${match.path}`} component={CollectionsOverview} />
+            <Route path={`${match.path}/:collectionId`} component={Collection} />
         </div>
     )
 };

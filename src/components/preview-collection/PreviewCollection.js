@@ -1,14 +1,14 @@
 import React from "react";
 import "./css/PreviewCollection.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import CollectionItem from "../collection-item/CollectionItem";
 
-const PreviewCollection = ({ match, title, items }) => {
+const PreviewCollection = ({ match, title, routeName, items }) => {
   return (
     <div className="preview-collection">
       <div className="preview-header">
         <h1 className="title">{title}</h1>
-        <Link to={`/shop/${title.toLowerCase()}`}>
+        <Link to={`${match.path}/${routeName}`}>
           <h2 className="subtitle">View entire collection</h2>
         </Link>
       </div>
@@ -23,4 +23,4 @@ const PreviewCollection = ({ match, title, items }) => {
   );
 };
 
-export default PreviewCollection;
+export default withRouter(PreviewCollection);

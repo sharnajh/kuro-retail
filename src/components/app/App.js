@@ -11,6 +11,7 @@ import Homepage from "../../pages/homepage/Homepage";
 import ShopPage from "../../pages/shop/ShopPage";
 import SignInSignUp from "../../pages/sign-in-and-sign-up/SignInSignUp";
 import CheckOutPage from "../../pages/checkout/CheckOutPage";
+import ScrollToTop from "../ScrollToTop";
 
 const App = ({ setAuthedUser, authedUser }) => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const App = ({ setAuthedUser, authedUser }) => {
   }, []);
   return (
     <div className="container">
+      <ScrollToTop />
       <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />

@@ -16,6 +16,7 @@ const CollectionItem = ({
   item,
   item: { id, imageUrl, name, price },
 }) => {
+  // Handle image loading
   let div = useRef();
   let image = useRef();
   const handleImgLoad = () => {

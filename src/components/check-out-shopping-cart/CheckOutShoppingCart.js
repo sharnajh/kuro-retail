@@ -8,7 +8,7 @@ const CheckOutShoppingCart = ({ cartItems }) => (
             <span className="title">Product</span>
             <span className="title">Description</span>
             <span className="title">Quantity</span>
-            <span className="title">Price</span>
+            <span className="title">Unit Price</span>
             <span className="title">Remove</span>
         </div>
         <div className="items">

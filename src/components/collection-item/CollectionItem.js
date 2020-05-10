@@ -3,12 +3,19 @@ import { useIntersection } from "../../hooks/useIntersection";
 import "./css/CollectionItem.css";
 import gsap from "gsap";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { addItemAction } from "../../redux/cart/cart.action";
 // Components
 import CustomButton from "../custom-button/CustomButton";
+import { selectCartItem } from "../../redux/cart/cart.selector";
 
-const CollectionItem = ({ addItemAction, item }) => {
-  const { id, imageUrl, name, price } = item;
+const CollectionItem = ({
+  history,
+  itemInCart,
+  addItemAction,
+  item,
+  item: { id, imageUrl, name, price },
+}) => {
   let div = useRef();
   let image = useRef();
   const handleImgLoad = () => {
@@ -25,6 +32,9 @@ const CollectionItem = ({ addItemAction, item }) => {
           alt={name}
           onLoad={handleImgLoad}
         />
+      )}
+      {itemInCart && (
+        <div className="quantity" onClick={() => history.push("/cart")}>In Cart: {itemInCart.quantity}</div>
       )}
       <CustomButton
         className="add-to-cart-button"
@@ -44,4 +54,10 @@ const mapDispatchToProps = (dispatch) => ({
   addItemAction: (item) => dispatch(addItemAction(item)),
 });
 
-export default connect(null, mapDispatchToProps)(CollectionItem);
+const mapStateToProps = (state, ownProps) => ({
+  itemInCart: selectCartItem(ownProps.item)(state),
+});
+
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(CollectionItem)
+);

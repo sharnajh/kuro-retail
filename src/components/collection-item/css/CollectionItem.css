@@ -35,13 +35,13 @@
   transition: 0.3s;
 }
 
-.collection-item:hover .add-to-cart-button {
+.collection-item:hover .add-to-cart-button, .collection-item:hover .quantity {
   opacity: 0.8;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.collection-item:hover .add-to-cart-button:hover {
+.collection-item:hover .add-to-cart-button:hover, .collection-item:hover .quantity:hover {
   opacity: 1;
 }
 
@@ -51,6 +51,20 @@
   height: 94%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+}
+
+.collection-item .quantity {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: bold;
   opacity: 0;
 }
 

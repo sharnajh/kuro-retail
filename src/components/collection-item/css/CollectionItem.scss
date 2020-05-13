@@ -20,7 +20,8 @@
       opacity: 0.7 !important;
       transition: 0.3s;
     }
-    .add-to-cart-button, .quantity {
+    .add-to-cart-button,
+    .quantity {
       opacity: 0.8;
       transition: 0.3s;
       &:hover {
@@ -66,7 +67,9 @@
     font-size: 20px;
     background-color: white;
     .name {
+      text-overflow: ellipsis;
       white-space: nowrap;
+      overflow: hidden;
     }
   }
 }

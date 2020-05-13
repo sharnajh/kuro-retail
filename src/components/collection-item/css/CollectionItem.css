@@ -35,13 +35,15 @@
   transition: 0.3s;
 }
 
-.collection-item:hover .add-to-cart-button, .collection-item:hover .quantity {
+.collection-item:hover .add-to-cart-button,
+.collection-item:hover .quantity {
   opacity: 0.8;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.collection-item:hover .add-to-cart-button:hover, .collection-item:hover .quantity:hover {
+.collection-item:hover .add-to-cart-button:hover,
+.collection-item:hover .quantity:hover {
   opacity: 1;
 }
 
@@ -93,6 +95,8 @@
 }
 
 .collection-item .collection-footer .name {
+  text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 /*# sourceMappingURL=CollectionItem.css.map */

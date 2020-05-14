@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/Header.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -8,34 +8,34 @@ import { selectCartToggle } from "../../redux/cart/cart.selector";
 import { selectAuthUser } from "../../redux/user/user.selector";
 // Components
 import ShoppingCartDropDown from "../shopping-cart-dropdown/ShoppingCartDropDown";
-// Assets
+// Assetss
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import ShoppingCart from "../shopping-cart/ShoppingCart";
 
 const Header = ({ authedUser, toggleCart }) => {
   return (
     <div className="header">
-      <Link to="/">
+      <NavLink to="/">
         <div className="logo">
           <Logo />
         </div>
-      </Link>
+      </NavLink>
       <div className="options">
-        <Link className="option link" to="/shop">
+        <NavLink className="option link" activeClassName="active" to="/shop">
           SHOP
-        </Link>
-        <Link className="option link" to="/contact">
+        </NavLink>
+        <NavLink className="option link" activeClassName="active" to="/contact">
           CONTACT
-        </Link>
+        </NavLink>
         {authedUser ? (
-          <div className="option link" onClick={() => auth.signOut()}>
+          <div className="option link" activeClassName="active" onClick={() => auth.signOut()}>
             sign out
           </div>
         ) : (
-          <Link className="option link" to="/signin">
-            SIGN IN
-          </Link>
-        )}
+            <NavLink className="option link" activeClassName="active" to="/signin">
+              SIGN IN
+            </NavLink>
+          )}
         <div className="option">
           <ShoppingCart />
         </div>

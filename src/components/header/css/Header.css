@@ -29,6 +29,21 @@
           align-items: center;
 }
 
+.header .options .active {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header .options .active:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width: 100% !important;
+  right: 0;
+  bottom: -4px;
+}
+
 .header .options .link {
   position: relative;
 }

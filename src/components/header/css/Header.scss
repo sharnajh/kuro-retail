@@ -1,49 +1,61 @@
 .header {
-    margin: 0 5px;
-    padding-top: 40px;
+  margin: 0 5px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  .logo {
+    width: 120px;
+    margin-left: 0;
+    margin-bottom: -3px;
+    padding: 10px 0;
+  }
+  .options {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
-    .logo {
-        width: 120px;
-        margin-left: 0;
-        margin-bottom: -3px;
-        padding: 10px 0;
+    .active {
+      transition: 1s;
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: black;
+        height: 2px;
+        width: 100% !important;
+        right: 0;
+        bottom: -4px;
+      }
     }
-    .options {
-        display: flex;
-        align-items: center;
-        .link {
-            position: relative;
-            &:after {
-                content: "";
-                position: absolute;
-                background-color: black;
-                height: 2px;
-                width: 0%;
-                right: 0;
-                bottom: -4px;
-                transition: ease 0.3s;
-            }
-            &:hover {
-                &:after {
-                    width: 100%;
-                    transition: ease 0.3s;
-                    left: 0;
-                }
-            }
+    .link {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: black;
+        height: 2px;
+        width: 0%;
+        right: 0;
+        bottom: -4px;
+        transition: ease 0.3s;
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+          transition: ease 0.3s;
+          left: 0;
         }
-        .option {
-            margin: 20px;
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-            text-transform: uppercase;
-            cursor: pointer;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+      }
     }
+    .option {
+      margin: 20px;
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

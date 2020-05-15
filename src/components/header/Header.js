@@ -21,8 +21,8 @@ const Header = ({ authedUser, toggleCart }) => {
         </div>
       </NavLink>
       <div className="options">
-        <NavLink className="option link" activeClassName="active" to="/shop">
-          SHOP
+        <NavLink className="shop option link" activeClassName="active" to="/shop">
+          SHOP <div className="arrow">❮</div>
         </NavLink>
         <NavLink className="option link" activeClassName="active" to="/contact">
           CONTACT

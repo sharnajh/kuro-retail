@@ -28,7 +28,7 @@ const Header = ({ authedUser, toggleCart }) => {
           CONTACT
         </NavLink>
         {authedUser ? (
-          <div className="option link" activeClassName="active" onClick={() => auth.signOut()}>
+          <div className="option link" onClick={() => auth.signOut()}>
             sign out
           </div>
         ) : (

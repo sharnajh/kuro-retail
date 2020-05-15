@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
 import "./css/App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { auth, createUserProfileDocument } from "../../firebase/firebase";
+import {
+  auth,
+  createUserProfileDocument,
+  //addCollectionAndDocuments,
+} from "../../firebase/firebase";
 import { connect } from "react-redux";
 import { setAuthedUser } from "../../redux/user/user.action";
 import { selectAuthUser } from "../../redux/user/user.selector";
+//import { selectShopCollectionsForPreview } from "../../redux/shop/shop.selector";
 //Components
 import Header from "../../components/header/Header";
 import Homepage from "../../pages/homepage/Homepage";
@@ -13,7 +18,7 @@ import SignInSignUp from "../../pages/sign-in-and-sign-up/SignInSignUp";
 import CheckOutPage from "../../pages/checkout/CheckOutPage";
 import ScrollToTop from "../ScrollToTop";
 
-const App = ({ setAuthedUser, authedUser }) => {
+const App = ({ setAuthedUser, authedUser, collectionsArray }) => {
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -26,6 +31,10 @@ const App = ({ setAuthedUser, authedUser }) => {
         });
       }
       setAuthedUser(userAuth);
+      // addCollectionAndDocuments(
+      //   "collections",
+      //   collectionsArray.map(({ title, items }) => ({ title, items }))
+      // );
     });
     return () => {
       unsubscribeFromAuth();
@@ -51,6 +60,7 @@ const App = ({ setAuthedUser, authedUser }) => {
 
 const mapStateToProps = (state) => ({
   authedUser: selectAuthUser(state),
+  //collectionsArray: selectShopCollectionsForPreview(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

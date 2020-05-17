@@ -5,8 +5,7 @@ import gsap from "gsap";
 const MainTitle = ({ children }) => {
   const title = useRef();
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.to(title.current, { bottom: "0px", duration: .5 });
+    gsap.to(title.current, { bottom: "0px", duration: .5 });
   });
   return (
     <div className="title-wrapper">

@@ -20,7 +20,7 @@ const CheckOutItem = ({
     gsap.to(row.current, {
       opacity: 0,
       height: 0,
-      duration: 0.2,
+      duration: 0.3,
       onComplete: () => removeItemFromCart(item),
     });
   };

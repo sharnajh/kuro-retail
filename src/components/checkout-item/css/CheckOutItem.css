@@ -8,6 +8,7 @@
   place-items: center;
   text-align: center;
   margin: 10px 0 10px 0;
+  overflow: hidden;
 }
 
 .row .product .image {

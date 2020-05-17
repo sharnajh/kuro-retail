@@ -9,6 +9,7 @@
 .row {
   @include grid-style(200px);
   margin: 10px 0 10px 0;
+  overflow: hidden;
   .product {
     .image {
       height: 200px;

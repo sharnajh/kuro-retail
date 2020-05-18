@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/PaymentForm.css";
 import { Elements } from "@stripe/react-stripe-js";
 import { CardElement } from "@stripe/react-stripe-js";
@@ -8,8 +8,10 @@ import { connect } from "react-redux";
 import CustomButton from "../../components/custom-button/CustomButton";
 import { selectCartTotal } from "../../redux/cart/cart.selector";
 import { createStructuredSelector } from "reselect";
+import FormInput from "../form-input/FormInput";
 
 const PaymentForm = ({ total }) => {
+  const [name, setName] = useState("");
   const publishableKey = "pk_test_C4TSMIwqMqiivcz3faqvkyCX00ehVMD1aY";
   const stripe = loadStripe(publishableKey);
   const CARD_OPTIONS = {
@@ -27,6 +29,13 @@ const PaymentForm = ({ total }) => {
           This is a project site only. Please do not enter real payment
           information.
         </div>
+        <FormInput
+          type="text"
+          label="Name on card"
+          value={name}
+          handleChange={setName}
+          className="name-input"
+        />
         <CardElement options={CARD_OPTIONS} />
         <CustomButton className="button">Pay ${total}</CustomButton>
       </Elements>

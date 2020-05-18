@@ -1,9 +1,9 @@
 import React from "react";
 import "./css/FormInput.css";
 
-const FormInput = ({ handleChange, label, value, ...props }) => {
+const FormInput = ({ handleChange, label, value, className, ...props }) => {
   return (
-    <div className="input-group">
+    <div className={`input-group ${className}`}>
       <input
         className="form-input"
         onChange={(e) => handleChange(e.target.value)}

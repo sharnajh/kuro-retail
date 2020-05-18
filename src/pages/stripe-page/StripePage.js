@@ -16,15 +16,15 @@ const StripePage = ({ cartItems }) => {
     <div className="stripe-page">
       <MainTitle>Checkout</MainTitle>
       <div className="stripe-wrapper">
-        <ReviewOrder />
         <PaymentForm />
+        <ReviewOrder />
       </div>
     </div>
   );
 };
 
 const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItemsCount
+  cartItems: selectCartItemsCount,
 });
 
 export default connect(mapStateToProps)(StripePage);

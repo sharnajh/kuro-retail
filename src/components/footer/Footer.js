@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <span className="title">
         Kuro is a website coded by{" "}
-        <a href="https://github.com/sharnajh">Sharna</a>
+        <a href="https://sharna.dev">Sharna</a>
       </span>
       <span className="socialmedia">
         <span className="link">

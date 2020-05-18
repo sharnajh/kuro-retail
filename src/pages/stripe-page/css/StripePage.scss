@@ -1,0 +1,12 @@
+.stripe-page {
+  margin: 5px;
+  .stripe-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    h2 {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+}

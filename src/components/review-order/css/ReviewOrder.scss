@@ -1,0 +1,35 @@
+@mixin grid-style($rowheight) {
+  display: grid;
+  grid-template-columns: 100px 1fr 0.5fr 0.5fr;
+  grid-template-rows: $rowheight;
+  place-items: center;
+  text-align: center;
+}
+
+.order-summary {
+  width: 40vw;
+  .header {
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+    border-bottom: 1px solid lightgray;
+    @include grid-style(50px);
+    .title {
+        font-weight: bold;
+    }
+  }
+  .total-row {
+    border-top: 1px solid lightgray;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0;
+    margin: 15px 0;
+    @include grid-style(50px);
+    .total-label {
+      grid-column: 3;
+    }
+    .total {
+      grid-column: 4;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.summary-item {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 0.5fr 0.5fr;
+      grid-template-columns: 100px 1fr 0.5fr 0.5fr;
+  -ms-grid-rows: 120px;
+      grid-template-rows: 120px;
+  place-items: center;
+  text-align: center;
+}
+
+.summary-item .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary-item .image {
+  position: relative;
+}
+
+.summary-item .image img {
+  width: 100%;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.summary-item .image.copious:after {
+  content: attr(data-quantity);
+  position: absolute;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+/*# sourceMappingURL=SummaryItem.css.map */

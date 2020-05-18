@@ -1,0 +1,21 @@
+.stripe-page {
+  margin: 5px;
+}
+
+.stripe-page .stripe-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.stripe-page .stripe-wrapper h2 {
+  text-align: center;
+  margin-left: 0;
+}
+/*# sourceMappingURL=StripePage.css.map */

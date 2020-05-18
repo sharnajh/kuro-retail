@@ -1,0 +1,49 @@
+.order-summary {
+  width: 40vw;
+}
+
+.order-summary .header {
+  width: 100%;
+  margin: 0 0 15px 0;
+  padding: 0;
+  border-bottom: 1px solid lightgray;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 0.5fr 0.5fr;
+      grid-template-columns: 100px 1fr 0.5fr 0.5fr;
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  place-items: center;
+  text-align: center;
+}
+
+.order-summary .header .title {
+  font-weight: bold;
+}
+
+.order-summary .total-row {
+  border-top: 1px solid lightgray;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 0;
+  margin: 15px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 0.5fr 0.5fr;
+      grid-template-columns: 100px 1fr 0.5fr 0.5fr;
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  place-items: center;
+  text-align: center;
+}
+
+.order-summary .total-row .total-label {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+.order-summary .total-row .total {
+  -ms-grid-column: 4;
+  grid-column: 4;
+}
+/*# sourceMappingURL=ReviewOrder.css.map */

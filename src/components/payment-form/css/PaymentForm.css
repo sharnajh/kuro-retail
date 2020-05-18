@@ -1,0 +1,22 @@
+.checkout {
+  width: 30vw;
+}
+
+.checkout h2 {
+  margin-bottom: 10px;
+}
+
+.checkout .warning {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #f4f2f7;
+  border: 1px solid #cfd1df;
+  color: #858aa3;
+}
+
+.checkout .button {
+  width: 100%;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=PaymentForm.css.map */

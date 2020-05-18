@@ -18,6 +18,7 @@ import SignInSignUp from "../../pages/sign-in-and-sign-up/SignInSignUp";
 import CheckOutPage from "../../pages/checkout/CheckOutPage";
 import ScrollToTop from "../ScrollToTop";
 import Footer from "../footer/Footer";
+import StripePage from "../../pages/stripe-page/StripePage";
 
 const App = ({ setAuthedUser, authedUser, collectionsArray }) => {
   useEffect(() => {
@@ -55,8 +56,8 @@ const App = ({ setAuthedUser, authedUser, collectionsArray }) => {
             render={() => (authedUser ? <Redirect to="/" /> : <SignInSignUp />)}
           />
           <Route path="/cart" component={CheckOutPage} />
+          <Route path="/checkout" component={StripePage} />
         </Switch>
-
       </div>
       <Footer />
     </div>

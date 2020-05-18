@@ -30,12 +30,17 @@
 :root body {
   margin: 0;
   font-family: "Barlow Condensed", sans-serif;
+  overflow-x: hidden !important;
+}
+
+:root body .wrapper {
+  width: 100vw;
   display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
-:root body .container {
+:root body .wrapper .container {
   position: relative;
   width: 90vw;
 }

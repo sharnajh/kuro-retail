@@ -17,6 +17,7 @@ import ShopPage from "../../pages/shop/ShopPage";
 import SignInSignUp from "../../pages/sign-in-and-sign-up/SignInSignUp";
 import CheckOutPage from "../../pages/checkout/CheckOutPage";
 import ScrollToTop from "../ScrollToTop";
+import Footer from "../footer/Footer";
 
 const App = ({ setAuthedUser, authedUser, collectionsArray }) => {
   useEffect(() => {
@@ -41,19 +42,23 @@ const App = ({ setAuthedUser, authedUser, collectionsArray }) => {
     };
   }, []);
   return (
-    <div className="container">
-      <ScrollToTop />
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/shop" component={ShopPage} />
-        <Route
-          exact
-          path="/signin"
-          render={() => (authedUser ? <Redirect to="/" /> : <SignInSignUp />)}
-        />
-        <Route path="/cart" component={CheckOutPage} />
-      </Switch>
+    <div className="wrapper">
+      <div className="container">
+        <ScrollToTop />
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/shop" component={ShopPage} />
+          <Route
+            exact
+            path="/signin"
+            render={() => (authedUser ? <Redirect to="/" /> : <SignInSignUp />)}
+          />
+          <Route path="/cart" component={CheckOutPage} />
+        </Switch>
+
+      </div>
+      <Footer />
     </div>
   );
 };

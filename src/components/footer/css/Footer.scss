@@ -1,0 +1,37 @@
+$color: #38f5dc;
+
+.footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 120px;
+    margin-top: 30px;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    a:link, a:visited, a:active {
+        text-decoration: none;
+        color: $color;
+        transition: 0.2s;
+    }
+    a:hover {
+        color: white;
+    }
+    .title {
+        font-size: 18px;
+    }
+    .socialmedia {
+        font-size: 13px;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        text-transform: uppercase;
+        a:active, a:visited {
+            color: white;
+        }
+        a:hover {
+            color: $color;
+        }
+    }
+}

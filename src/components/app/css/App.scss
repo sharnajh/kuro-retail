@@ -20,12 +20,12 @@ $red: #fe346e;
   ::-webkit-scrollbar-track {
     background: white;
   }
-  
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: black;
   }
-  
+
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
@@ -33,11 +33,15 @@ $red: #fe346e;
   body {
     margin: 0;
     font-family: "Barlow Condensed", sans-serif;
-    display: grid;
-    place-items: center;
-    .container {
-      position: relative;
-      width: 90vw;
+    overflow-x: hidden !important;
+    .wrapper {
+      width: 100vw;
+      display: grid;
+      place-items: center;
+      .container {
+        position: relative;
+        width: 90vw;
+      }
     }
   }
 }

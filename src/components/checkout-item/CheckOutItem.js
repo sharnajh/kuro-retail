@@ -24,6 +24,17 @@ const CheckOutItem = ({
       onComplete: () => removeItemFromCart(item),
     });
   };
+  const handleQuantityRemove = item => {
+    if (quantity === 1) {
+      return gsap.to(row.current, {
+        opacity: 0,
+        height: 0,
+        duration: 0.3,
+        onComplete: () => removeItemAction(item),
+      });
+    }
+    return removeItemAction(item);
+  }
   return (
     <div className="row" ref={row}>
       <span className="product">
@@ -31,7 +42,7 @@ const CheckOutItem = ({
       </span>
       <span className="description">{name}</span>
       <span className="quantity">
-        <div className="arrow" onClick={() => removeItemAction(item)}>
+        <div className="arrow" onClick={() => handleQuantityRemove(item)}>
           &#10094;
         </div>
         <span className="value">{quantity}</span>

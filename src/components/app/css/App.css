@@ -43,5 +43,6 @@
 :root body .wrapper .container {
   position: relative;
   width: 90vw;
+  min-height: 100vh;
 }
 /*# sourceMappingURL=App.css.map */

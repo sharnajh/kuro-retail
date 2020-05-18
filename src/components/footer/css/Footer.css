@@ -12,29 +12,65 @@
   place-items: center;
 }
 
-.footer a:link, .footer a:visited, .footer a:active {
+.footer a:link,
+.footer a:visited,
+.footer a:active {
   text-decoration: none;
-  color: #38f5dc;
+  color: white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 .footer a:hover {
-  color: white;
+  color: #38f5dc;
 }
 
 .footer .title {
-  font-size: 18px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.footer .title a:link, .footer .title a:visited, .footer .title a:active {
+  text-decoration: underline;
 }
 
 .footer .socialmedia {
-  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 320px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .socialmedia .link {
+  position: relative;
   letter-spacing: 2px;
-  word-spacing: 10px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
-.footer .socialmedia a:active, .footer .socialmedia a:visited {
+.footer .socialmedia .link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: -3px;
+  height: 1px;
+  background-color: #38f5dc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  right: 2px;
+}
+
+.footer .socialmedia .link:hover:after {
+  width: calc(100% - 2px);
+  left: 0;
+}
+
+.footer .socialmedia a:active,
+.footer .socialmedia a:visited {
   color: white;
 }
 

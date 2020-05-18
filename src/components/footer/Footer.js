@@ -9,11 +9,20 @@ const Footer = () => {
         <a href="https://github.com/sharnajh">Sharna</a>
       </span>
       <span className="socialmedia">
-        <a href="https://github.com/sharnajh">github</a>{" "}
-        <a href="https://www.linkedin.com/in/sharnahossain/">LinkedIn</a>{" "}
-        <a href="https://stackoverflow.com/users/11864970/sharna-j">
-          StackOverflow
-        </a>
+        <span className="link">
+          <a href="https://github.com/sharnajh">github</a>
+        </span>
+        <span className="link">
+          <a href="https://www.linkedin.com/in/sharnahossain/">LinkedIn</a>
+        </span>
+        <span className="link">
+          <a href="https://codepen.io/sharnajh">Codepen</a>
+        </span>
+        <span className="link">
+          <a href="https://stackoverflow.com/users/11864970/sharna-j">
+            StackOverflow
+          </a>
+        </span>
       </span>
     </footer>
   );

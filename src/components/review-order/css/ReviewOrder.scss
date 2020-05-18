@@ -13,6 +13,7 @@
     margin: 0 0 15px 0;
     padding: 0;
     border-bottom: 1px solid lightgray;
+    text-transform: capitalize;
     @include grid-style(50px);
     .title {
         font-weight: bold;

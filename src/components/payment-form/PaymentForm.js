@@ -15,7 +15,7 @@ const PaymentForm = ({ total }) => {
   const CARD_OPTIONS = {
     style: {
       base: {
-        fontSize: "20px",
+        fontSize: "17px",
       },
     },
   };

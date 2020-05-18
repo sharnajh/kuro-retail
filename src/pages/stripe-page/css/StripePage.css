@@ -17,5 +17,6 @@
 .stripe-page .stripe-wrapper h2 {
   text-align: center;
   margin-left: 0;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=StripePage.css.map */

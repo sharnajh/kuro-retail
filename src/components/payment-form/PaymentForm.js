@@ -12,12 +12,16 @@ import FormInput from "../form-input/FormInput";
 
 const PaymentForm = ({ total }) => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const publishableKey = "pk_test_C4TSMIwqMqiivcz3faqvkyCX00ehVMD1aY";
   const stripe = loadStripe(publishableKey);
   const CARD_OPTIONS = {
     style: {
       base: {
         fontSize: "17px",
+        fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+        fontWeight: 500,
       },
     },
   };
@@ -31,9 +35,23 @@ const PaymentForm = ({ total }) => {
         </div>
         <FormInput
           type="text"
-          label="Name on card"
+          label="Name"
           value={name}
           handleChange={setName}
+          className="name-input"
+        />
+        <FormInput
+          type="email"
+          label="Email"
+          value={email}
+          handleChange={setEmail}
+          className="name-input"
+        />
+        <FormInput
+          type="phone"
+          label="Phone number"
+          value={phone}
+          handleChange={setPhone}
           className="name-input"
         />
         <CardElement options={CARD_OPTIONS} />

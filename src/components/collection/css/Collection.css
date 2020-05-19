@@ -23,6 +23,15 @@
   text-transform: uppercase;
 }
 
+.collection .collection-header .filter {
+  margin-right: 15px;
+}
+
+.collection .collection-header .filter .dropdown {
+  padding: 2px;
+  font-size: 12px;
+}
+
 .collection .items {
   width: 100%;
   display: -ms-grid;

@@ -38,7 +38,7 @@ const ShoppingCartDropDown = ({ cartItems, history, dispatch }) => {
             className="btn"
             onClick={() => {
               dispatch(toggleCartAction());
-              history.push("/checkout");
+              history.push("/cart/checkout");
             }}
           >
             CHECKOUT

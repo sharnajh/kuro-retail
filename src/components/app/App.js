@@ -55,8 +55,8 @@ const App = ({ setAuthedUser, authedUser, collectionsArray }) => {
             path="/signin"
             render={() => (authedUser ? <Redirect to="/" /> : <SignInSignUp />)}
           />
-          <Route path="/cart" component={CheckOutPage} />
-          <Route path="/checkout" component={StripePage} />
+          <Route exact path="/cart" component={CheckOutPage} />
+          <Route path="/cart/checkout" component={StripePage} />
         </Switch>
       </div>
       <Footer />

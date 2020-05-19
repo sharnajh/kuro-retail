@@ -9,7 +9,7 @@ const StripeCheckOutButton = ({ price, history }) => {
     <div className="stripe-checkout-button">
       <CustomButton
         className="checkout-button"
-        onClick={() => history.push("/checkout")}
+        onClick={() => history.push("/cart/checkout")}
       >
         Checkout
       </CustomButton>

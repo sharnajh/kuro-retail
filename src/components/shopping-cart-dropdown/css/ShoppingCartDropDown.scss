@@ -35,7 +35,15 @@
       text-align: center;
     }
   }
-  .btn {
-    margin-top: auto;
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      width: 49%;
+      min-width: 49% !important;
+      font-size: 12px;
+      padding: 10px;
+      height: 40px;
+    }
   }
 }

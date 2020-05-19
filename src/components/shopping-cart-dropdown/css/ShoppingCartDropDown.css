@@ -60,7 +60,20 @@
   text-align: center;
 }
 
-.shopping-cart-dropdown .btn {
-  margin-top: auto;
+.shopping-cart-dropdown .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shopping-cart-dropdown .btn-group .btn {
+  width: 49%;
+  min-width: 49% !important;
+  font-size: 12px;
+  padding: 10px;
+  height: 40px;
 }
 /*# sourceMappingURL=ShoppingCartDropDown.css.map */

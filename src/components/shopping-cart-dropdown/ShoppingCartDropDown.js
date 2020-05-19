@@ -20,30 +20,41 @@ const ShoppingCartDropDown = ({ cartItems, history, dispatch }) => {
             ))}
           </div>
         ) : (
-          <div className="empty-message">Your cart is empty</div>
-        )}
+            <div className="empty-message">Your cart is empty</div>
+          )}
       </div>
       {cartItems.length > 0 ? (
-        <CustomButton
-          className="btn"
-          onClick={() => {
-            dispatch(toggleCartAction());
-            history.push("/cart");
-          }}
-        >
-          GO TO Cart
+        <div className="btn-group">
+          <CustomButton
+            className="btn"
+            onClick={() => {
+              dispatch(toggleCartAction());
+              history.push("/cart");
+            }}
+          >
+            GO TO Cart
         </CustomButton>
+          <CustomButton
+            className="btn"
+            onClick={() => {
+              dispatch(toggleCartAction());
+              history.push("/checkout");
+            }}
+          >
+            CHECKOUT
+       </CustomButton>
+        </div>
       ) : (
-        <CustomButton
-          className="btn"
-          onClick={() => {
-            dispatch(toggleCartAction());
-            history.push("/shop");
-          }}
-        >
-          SHOP
-        </CustomButton>
-      )}
+          <CustomButton
+            className="btn"
+            onClick={() => {
+              dispatch(toggleCartAction());
+              history.push("/shop");
+            }}
+          >
+            SHOP
+          </CustomButton>
+        )}
     </div>
   );
 };

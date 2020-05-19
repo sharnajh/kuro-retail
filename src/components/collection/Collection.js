@@ -10,6 +10,11 @@ const Collection = ({ collection: { title, items } }) => {
     return (
         <div className="collection">
             <MainTitle>{title}</MainTitle>
+            <div className="collection-header">
+                <span className="displaying">
+                    Displaying 1 - {items.length} of {items.length} items
+                </span>
+            </div>
             <div className="items">
                 {items.map((item) => (
                     <CollectionItem key={item.id} item={item} />

@@ -8,8 +8,22 @@
           flex-direction: column;
 }
 
+.collection .collection-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.collection .collection-header .displaying {
+  text-transform: uppercase;
+}
+
 .collection .items {
-  margin-top: 20px;
   width: 100%;
   display: -ms-grid;
   display: grid;

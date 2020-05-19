@@ -1,0 +1,29 @@
+.path-tree {
+  color: black;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 20px;
+  .path {
+    margin: 10px;
+    position: relative;
+    &.active {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    &.inactive {
+        pointer-events: none;
+    }
+    &:after {
+      content: "/";
+      position: absolute;
+      right: -13px;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

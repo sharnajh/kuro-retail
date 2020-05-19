@@ -4,32 +4,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  .url-path {
-    color: black;
-    text-transform: uppercase;
-    font-size: 13px;
-    margin-bottom: 20px;
-    .path {
-      margin: 10px;
-      position: relative;
-      &.active {
-        &:hover {
-          text-decoration: underline;
-          cursor: pointer;
-        }
-      }
-      &:after {
-        content: "/";
-        position: absolute;
-        right: -13px;
-      }
-      &:last-child {
-        &:after {
-          display: none;
-        }
-      }
-    }
-  }
   .main-title {
     position: relative;
     margin: 0;

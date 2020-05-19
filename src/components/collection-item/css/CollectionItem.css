@@ -8,7 +8,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   height: 350px;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

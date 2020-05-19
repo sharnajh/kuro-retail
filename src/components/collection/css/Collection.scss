@@ -1,27 +1,29 @@
 .collection {
+  display: flex;
+  flex-direction: column;
+  .collection-header {
     display: flex;
-    flex-direction: column;
-    .collection-header {
-        display: flex;
-        justify-content: space-between;
-        font-size: 15px;
-        margin-top: 5px;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-top: 5px;
 
-        .displaying {
-            text-transform: uppercase;
-        }
-        .filter {
-            margin-right: 15px;
-            .dropdown {
-                padding: 2px;
-                font-size: 12px;
-            }
-        }
+    .displaying {
+      text-transform: uppercase;
     }
-    .items {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 5px;
+    .filter {
+      .dropdown {
+        padding: 2px;
+        font-size: 12px;
+      }
     }
+  }
+  .items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 350px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    margin-bottom: 20px;
+  }
 }

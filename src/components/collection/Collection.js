@@ -5,7 +5,6 @@ import { selectCollection } from "../../redux/shop/shop.selector";
 // Components
 import CollectionItem from "../collection-item/CollectionItem";
 import MainTitle from "../main-title/MainTitle";
-import CustomButton from "../custom-button/CustomButton";
 
 const Collection = ({ collection: { title, items } }) => {
     const [filterOption, setFilter] = useState("");
@@ -39,11 +38,13 @@ const Collection = ({ collection: { title, items } }) => {
                     </select>
                 </form>
             </div>
+
             <div className="items">
                 {filteredItems().map((item) => (
                     <CollectionItem key={item.id} item={item} />
                 ))}
             </div>
+
         </div>
     )
 };

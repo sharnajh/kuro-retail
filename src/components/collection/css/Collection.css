@@ -23,10 +23,6 @@
   text-transform: uppercase;
 }
 
-.collection .collection-header .filter {
-  margin-right: 15px;
-}
-
 .collection .collection-header .filter .dropdown {
   padding: 2px;
   font-size: 12px;
@@ -36,8 +32,11 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 350px;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=Collection.css.map */

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./css/Shop.css";
 import { Route } from "react-router-dom";
 // import {

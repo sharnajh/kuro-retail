@@ -73,7 +73,7 @@
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 350px;
-  grid-gap: 5px;
+  grid-column-gap: 20px;
   z-index: 1;
 }
 /*# sourceMappingURL=PreviewCollection.css.map */

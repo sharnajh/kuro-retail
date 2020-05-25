@@ -5,10 +5,9 @@ import "./css/VHSImage.css";
 const VHSImage = ({ minImgUrl, bigImgUrl, title }) => {
   const [imgLoaded, setImgLoaded] = useState(false);
   const placeholder = useRef();
-  const bigImg = useRef();
   const handleImgLoad = async () => {
     await gsap.to(placeholder.current, {
-      opacity: 0, filter: "blur(0px)", duration: 0.7, onComplete: () => {
+      opacity: 0, filter: "blur(0px) !important", duration: 0.7, onComplete: () => {
         setImgLoaded(true);
       }
     });
@@ -36,7 +35,6 @@ const VHSImage = ({ minImgUrl, bigImgUrl, title }) => {
         </filter>
       </svg>
       <img
-        ref={bigImg}
         className="background-image"
         src={bigImgUrl}
         onLoad={handleImgLoad}

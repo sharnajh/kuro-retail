@@ -21,10 +21,6 @@
   transition: 0.2s;
 }
 
-.footer a:hover {
-  color: #38f5dc;
-}
-
 .footer .title {
   font-size: 15px;
   text-transform: uppercase;
@@ -58,7 +54,7 @@
   width: 0;
   bottom: -3px;
   height: 1px;
-  background-color: #38f5dc;
+  background-color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   right: 2px;
@@ -72,9 +68,5 @@
 .footer .socialmedia a:active,
 .footer .socialmedia a:visited {
   color: white;
-}
-
-.footer .socialmedia a:hover {
-  color: #38f5dc;
 }
 /*# sourceMappingURL=Footer.css.map */

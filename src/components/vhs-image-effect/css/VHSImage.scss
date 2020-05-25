@@ -40,6 +40,7 @@ $scale: scale(1.15);
   &.b {
     position: absolute;
     opacity: 0;
+    transition: transform 0.5s;
   }
   &.r,
   &.g {

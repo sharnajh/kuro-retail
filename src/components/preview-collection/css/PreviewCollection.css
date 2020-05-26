@@ -76,4 +76,13 @@
   grid-column-gap: 20px;
   z-index: 1;
 }
+
+@media screen and (max-width: 600px) {
+  .preview-collection .preview {
+    grid-auto-rows: 250px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+}
 /*# sourceMappingURL=PreviewCollection.css.map */

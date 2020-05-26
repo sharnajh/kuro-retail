@@ -14,7 +14,7 @@ const CollectionItem = ({
   itemInCart,
   addItemAction,
   item,
-  item: { id, imageUrl, name, price },
+  item: { imageUrl, name, price },
 }) => {
   // Handle image loading
   let div = useRef();

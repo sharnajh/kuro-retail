@@ -38,4 +38,12 @@
   grid-row-gap: 20px;
   grid-column-gap: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  .collection .items {
+    grid-auto-rows: 250px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
 /*# sourceMappingURL=Collection.css.map */

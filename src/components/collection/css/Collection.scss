@@ -24,5 +24,9 @@
     grid-auto-rows: 350px;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
+    @media screen and (max-width: 600px) {
+      grid-auto-rows: 250px;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

@@ -3,8 +3,7 @@ import "./css/StripeCheckOutButton.css";
 import CustomButton from "../custom-button/CustomButton";
 import { withRouter } from "react-router-dom";
 
-const StripeCheckOutButton = ({ price, history }) => {
-  const publishableKey = "pk_test_C4TSMIwqMqiivcz3faqvkyCX00ehVMD1aY";
+const StripeCheckOutButton = ({ history }) => {
   return (
     <div className="stripe-checkout-button">
       <CustomButton

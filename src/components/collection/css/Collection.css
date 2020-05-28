@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 600px) {
   .collection .items {
-    grid-auto-rows: 250px;
+    grid-auto-rows: minmax(250px, 1fr);
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }

@@ -1,12 +1,12 @@
-.checkout-total {
-  border-left: 1px solid gray;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.parent-wrapper {
+  width: 25%;
+  position: relative;
+}
+
+.parent-wrapper .checkout-total {
+  margin-top: 90px;
   height: 130px;
-  margin-left: 40px;
-  margin-top: 50px;
-  padding: 0 10px 0px 30px;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +22,7 @@
           align-items: center;
 }
 
-.checkout-total .total-price {
+.parent-wrapper .checkout-total .total-price {
   font-size: 25px;
   font-weight: bold;
   display: -webkit-box;

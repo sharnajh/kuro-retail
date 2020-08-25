@@ -10,32 +10,32 @@ const CheckOutTotal = ({ cartItemsTotal }) => {
   const [width, setWidth] = useState(0);
   const parent = useRef();
   const node = useRef();
+  const handleSticky = (e) => {
+    if (node.current) {
+      console.log(top, window.scrollY);
+      if (top - 90 < window.scrollY) {
+        node.current.style.position = "fixed";
+        node.current.style.top = 0;
+        node.current.style.width = width + "px";
+      } else {
+        node.current.style.position = "relative";
+      }
+    }
+  };
   useEffect(() => {
     const getDimensions = () => {
       setTop(node.current.getBoundingClientRect().top);
       setWidth(parent.current.getBoundingClientRect().width);
-    };
+    }
     if (node.current && parent.current) {
       getDimensions();
       window.addEventListener("resize", getDimensions);
     }
     return () => {
       window.removeEventListener("resize", getDimensions);
-    };
+    }
   }, [node, parent]);
   useEffect(() => {
-    const handleSticky = () => {
-      if (node.current) {
-        console.log(top, window.scrollY);
-        if (top - 90 < window.scrollY) {
-          node.current.style.position = "fixed";
-          node.current.style.top = 0;
-          node.current.style.width = width + "px";
-        } else {
-          node.current.style.position = "relative";
-        }
-      }
-    };
     window.addEventListener("scroll", handleSticky);
     return () => {
       window.removeEventListener("scroll", handleSticky);

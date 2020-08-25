@@ -30,7 +30,7 @@ const CheckOutTotal = ({ cartItemsTotal }) => {
     return () => {
       window.removeEventListener("scroll", handleSticky);
     };
-  }, [node, handleSticky]);
+  }, [node, parent, handleSticky]);
   return (
     <div className="parent-wrapper" ref={parent}>
       <div className="checkout-total" ref={node}>

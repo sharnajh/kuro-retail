@@ -1,4 +1,6 @@
-# Kuro is a fictional urban online retail store, powered by React. 
+# Kuro is a fictional urban online retail store, powered by React.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2b7a82e8-9620-4b33-9549-366b08fb19d9/deploy-status)](https://app.netlify.com/sites/kuro-retail/deploys)
 
 ## Features & Process
 ### Images

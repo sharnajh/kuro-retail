@@ -12,7 +12,8 @@ const CheckOutTotal = ({ cartItemsTotal }) => {
   const node = useRef();
   const handleSticky = (e) => {
     if (node.current) {
-      if (top - 90 <= window.scrollY) {
+      console.log(top, window.scrollY);
+      if (top - 90 < window.scrollY) {
         node.current.style.position = "fixed";
         node.current.style.top = 0;
         node.current.style.width = width + "px";
@@ -25,12 +26,18 @@ const CheckOutTotal = ({ cartItemsTotal }) => {
     if (node.current && parent.current) {
       setTop(node.current.getBoundingClientRect().top);
       setWidth(parent.current.getBoundingClientRect().width);
+      window.addEventListener("resize", () => {
+        setTop(node.current.getBoundingClientRect().top);
+        setWidth(parent.current.getBoundingClientRect().width);
+      });
     }
+  }, [node, parent]);
+  useEffect(() => {
     window.addEventListener("scroll", handleSticky);
     return () => {
       window.removeEventListener("scroll", handleSticky);
     };
-  }, [node, parent, handleSticky]);
+  }, [handleSticky]);
   return (
     <div className="parent-wrapper" ref={parent}>
       <div className="checkout-total" ref={node}>
